@@ -35,7 +35,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.navContainer, .tileSection, .textContainer, .teamContainer, .formContainer {
+.navContainer, .tileSection, .textContainer, .teamContainer, .formContainer, .contactContainer {
   display: flex;
   margin: 0 auto;
   max-width: 980px;
@@ -60,15 +60,29 @@ img {
   width: 20%;
   padding: 0 15px; }
 
-h2 {
+h2, h3 {
   display: block;
-  font: 300 normal 3.6em/1 "Oswald";
   margin-bottom: 20px;
   text-align: center;
   text-transform: uppercase; }
 
+h2 {
+  font: 300 normal 3.6em/1 "Oswald"; }
+
+h3 {
+  font: 300 normal 2.4em/1 "Titillium"; }
+
+h4 {
+  font: 600 normal 1.4em/1 "Titillium"; }
+
+h5 {
+  font: 300 normal 1.2em/1 "Titillium"; }
+
+p {
+  font: 200 normal 1.8em/1.7em "Titillium"; }
+
 .introSection {
-  background: #1E1E1E; }
+  background: #1e1e1e; }
 
 .navSection {
   background: url("../images/eye-pattern.png") repeat, linear-gradient(to bottom, transparent 80%, rgba(0, 0, 0, 0.1));
@@ -136,10 +150,11 @@ h2 {
 .aboutSection {
   padding: 40px 10px;
   text-align: center; }
-  .aboutSection p {
-    font: 200 normal 1.8em/1.7em "Titillium"; }
   .aboutSection h3 {
-    font: 600 normal 1.4em/1 "Titillium"; }
+    color: #9e9e9e;
+    margin: 20px auto 10px; }
+  .aboutSection p {
+    margin-bottom: 20px; }
 
 .textContainer {
   color: white; }
@@ -149,7 +164,13 @@ h2 {
     flex: 0 0  100%; }
 
 .teamContainer {
+  color: white;
   margin-top: 20px; }
+  .teamContainer h4 {
+    margin-top: 10px; }
+  .teamContainer h5 {
+    color: #1e1e1e;
+    margin-top: 5px; }
 
 .teamImg {
   border-radius: 50%; }
@@ -208,3 +229,27 @@ h2 {
     display: block;
     margin-top: -22px;
     z-index: 0; }
+
+.contactSection {
+  padding: 40px 0 20px; }
+
+.contactContainer {
+  justify-content: center; }
+
+.contactIcon {
+  background: #00a9d3;
+  border-radius: 50%;
+  line-height: 0;
+  margin: 20px 10px;
+  width: 40px;
+  padding: 10px; }
+  .contactIcon.mail {
+    padding: 12px; }
+  .contactIcon:hover {
+    background: white; }
+  .contactIcon:first-child {
+    margin-left: 0; }
+  .contactIcon:last-child {
+    margin-right: 0; }
+  .contactIcon svg {
+    fill: #6b6b6b; }

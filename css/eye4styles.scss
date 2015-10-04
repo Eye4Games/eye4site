@@ -1,6 +1,6 @@
 @import "reset";
 
-$mainBlack:#1E1E1E;
+$mainBlack:#1e1e1e;
 $midBlack:lighten($mainBlack,50%);
 $lightBlack:lighten($mainBlack,30%);
 $mainBlue:#00a9d3;
@@ -17,7 +17,7 @@ $mainWidth:980px;
 //******************************************************UNIVERSAL
 *,*+*{box-sizing: border-box;}
 body{
-	background: lighten($mainBlack,30%);
+	background: $lightBlack;
 	font-size: 62.5%;
 	}
 img{
@@ -32,19 +32,26 @@ img{
 	width: 20%;
 	padding: 0 15px;
 	}
-h2{
-	display: block;
-	font: 300 normal 3.6em/1 "Oswald";
-	margin-bottom: 20px;
-	text-align: center;
+h2, h3{
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
 	text-transform: uppercase;
-	}
+    }
+h2{font: 300 normal 3.6em/1 "Oswald";}
+h3{font: 300 normal 2.4em/1 "Titillium";}
+h4{font: 600 normal 1.4em/1 "Titillium";}
+h5{font: 300 normal 1.2em/1 "Titillium";}
+p{font: 200 normal 1.8em/1.7em "Titillium";}
 
 //
 //******************************************************START
 .introSection{
 	background:$mainBlack;
 	}
+
+//
+//**************************************************NAVIGATION
 .navSection{
 	background: url("../images/eye-pattern.png") repeat, linear-gradient(to bottom, rgba(black,0) 80%,rgba(black,.1));
 	height: 93px;
@@ -72,7 +79,9 @@ h2{
 			}
 		}
 	}	
-	
+
+//
+//*******************************************************GAMES	
 .tileSection{
 	@extend %container;
 	font: 200 normal 1.8em/0 "Titillium";
@@ -115,12 +124,16 @@ h2{
 	z-index: 2;
 	}	
 	
-	
+//
+//*************************************************ABOUT US	
 .aboutSection{
 	padding:40px 10px;
 	text-align: center;
-	p{font: 200 normal 1.8em/1.7em "Titillium";}
-	h3{font: 600 normal 1.4em/1 "Titillium";}
+	h3{
+    	color: $midBlack;
+    	margin: 20px auto 10px;
+    	}
+    p{margin-bottom: 20px;}
 	}	
 .textContainer{
 	@extend %container;
@@ -130,7 +143,13 @@ h2{
 	}	
 .teamContainer{
 	@extend %container;
+	color: white;
 	margin-top: 20px;
+	h4{margin-top: 10px;}
+	h5{
+    	color: $mainBlack;
+    	margin-top: 5px;
+	    }
 	}
 .teamImg{border-radius: 50%;}
 
@@ -192,4 +211,27 @@ h2{
 		z-index: 0;
 		}
 	}
+	
+//
+//**************************************************CONTACT US
+.contactSection{
+    padding: 40px 0 20px;
+    }
+.contactContainer{
+    @extend %container;
+    justify-content: center;
+    }
+.contactIcon{
+        background: $mainBlue;
+        border-radius: 50%;
+        line-height: 0;
+        margin: 20px 10px;
+        width: 40px;
+        padding: 10px;
+        &.mail{padding: 12px;}
+        &:hover{background: white;}
+        &:first-child{margin-left: 0;}
+        &:last-child{margin-right: 0;}
+        svg{fill:$lightBlack}
+        }
 	
