@@ -128,22 +128,24 @@ p {
     position: absolute;
     content: "";
     border-radius: 50%;
-    background: #00a9d3;
+    background: linear-gradient(to bottom, rgba(0, 169, 211, 0.1), rgba(0, 169, 211, 0.7));
+    opacity: 1;
     width: 100%;
     height: 100%;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 1;
-    mix-blend-mode: color; }
+    z-index: 1; }
   .gameTile:hover::before {
-    background: transparent;
-    transition: 350ms background ease-in-out; }
+    opacity: 0;
+    transition: 350ms opacity ease-in-out; }
 
 .gameTileImg {
   border-radius: 50%;
   box-shadow: 0 2px 2px #040404; }
+  .gameTileImg:hover {
+    box-shadow: 0 4px 2px black; }
 
 .siteButton {
   background: #9e9e9e;
@@ -223,6 +225,8 @@ p {
   position: relative;
   text-transform: uppercase;
   z-index: 1; }
+  .submitButton:hover {
+    background: #0080a0; }
 
 .submitContainer {
   position: relative;

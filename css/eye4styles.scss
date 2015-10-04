@@ -102,7 +102,8 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
 		position: absolute;
 		content: "";
 		border-radius: 50%;
-		background: $mainBlue;
+		background: linear-gradient(to bottom, rgba($mainBlue,.1), rgba($mainBlue,.7));
+		opacity: 1;
 		width: 100%;
 		height: 100%;
 		top: 0;
@@ -110,16 +111,17 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
 		left: 0;
 		bottom: 0;
 		z-index: 1;
-		mix-blend-mode:color;
+		//mix-blend-mode:color;
 		}
 	&:hover::before{
-		background: transparent;
-		transition: 350ms background ease-in-out;
+		opacity: 0;
+		transition: 350ms opacity ease-in-out;
 		}
 	}
 .gameTileImg{
 	border-radius: 50%;
 	box-shadow: 0 2px 2px darken($mainBlack,10%);
+	&:hover{box-shadow: 0 4px 2px darken($mainBlack,20%);}
 	}
 .siteButton{
 	background: $midBlack;
@@ -203,6 +205,9 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
 	position: relative;
 	text-transform: uppercase;
 	z-index: 1;
+	&:hover{
+    	background: darken($mainBlue,10%);
+	    }
 	}
 .submitContainer{
 	position: relative;
