@@ -52,6 +52,13 @@ img {
   max-width: 100%;
   height: auto; }
 
+.clear {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
 .oneThird {
   width: 33.3333333333333333%;
   padding: 0 15px; }
@@ -206,6 +213,7 @@ p {
     width: 50%; }
 
 .submitButton {
+  -webkit-appearance: none;
   background: #00a9d3;
   color: white;
   cursor: pointer;

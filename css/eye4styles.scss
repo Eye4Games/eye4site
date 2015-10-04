@@ -24,6 +24,13 @@ img{
 	max-width: 100%;
 	height: auto;
 	}
+.clear{
+    content: "."; 
+    visibility: hidden; 
+    display: block; 
+    height: 0; 
+    clear: both;
+    }
 .oneThird{
 	width: 33.3333333333333333%;
 	padding: 0 15px;
@@ -186,6 +193,7 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
 		}
 	}
 .submitButton{
+    -webkit-appearance: none;
 	background: $mainBlue;
 	color: white;
 	cursor: pointer;
