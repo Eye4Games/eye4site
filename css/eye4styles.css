@@ -69,7 +69,7 @@ img {
 
 h2, h3 {
   display: block;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   text-align: center;
   text-transform: uppercase; }
 
@@ -174,6 +174,7 @@ p {
 
 .teamContainer {
   color: white;
+  justify-content: center;
   margin-top: 20px; }
   .teamContainer h4 {
     margin-top: 10px; }
@@ -226,7 +227,7 @@ p {
   text-transform: uppercase;
   z-index: 1; }
   .submitButton:hover {
-    background: #0080a0; }
+    background: #21d3ff; }
 
 .submitContainer {
   position: relative;
@@ -243,6 +244,7 @@ p {
     z-index: 0; }
 
 .contactSection {
+  background: #1e1e1e;
   padding: 40px 0 20px; }
 
 .contactContainer {
@@ -258,10 +260,26 @@ p {
   .contactIcon.mail {
     padding: 12px; }
   .contactIcon:hover {
-    background: white; }
+    background: #21d3ff; }
   .contactIcon:first-child {
     margin-left: 0; }
   .contactIcon:last-child {
     margin-right: 0; }
   .contactIcon svg {
-    fill: #6b6b6b; }
+    fill: #1e1e1e; }
+
+@media screen and (max-width: 768px) {
+  .oneFifth {
+    width: 50%;
+    margin-bottom: 20px; }
+    .oneFifth:last-child {
+      margin-bottom: 0; }
+
+  .teamImg {
+    max-width: 200px; } }
+@media screen and (max-width: 540px) {
+  .oneThird, .oneFifth {
+    width: 100%;
+    margin-bottom: 20px; }
+    .oneThird:last-child, .oneFifth:last-child {
+      margin-bottom: 0; } }

@@ -41,7 +41,7 @@ img{
 	}
 h2, h3{
     display: block;
-    margin-bottom: 20px;
+    margin:0 auto 20px;
     text-align: center;
 	text-transform: uppercase;
     }
@@ -153,6 +153,7 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
 .teamContainer{
 	@extend %container;
 	color: white;
+	justify-content: center;
 	margin-top: 20px;
 	h4{margin-top: 10px;}
 	h5{
@@ -160,8 +161,12 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
     	margin-top: 5px;
 	    }
 	}
-.teamImg{border-radius: 50%;}
+.teamImg{
+    border-radius: 50%;
+    }
 
+//
+//*************************************************NEWSLETTER
 .newsletterSection{
 	background: $midBlack;
 	padding: 40px 0;
@@ -206,7 +211,7 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
 	text-transform: uppercase;
 	z-index: 1;
 	&:hover{
-    	background: darken($mainBlue,10%);
+    	background: lighten($mainBlue,15%);;
 	    }
 	}
 .submitContainer{
@@ -228,6 +233,7 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
 //
 //**************************************************CONTACT US
 .contactSection{
+    background: $mainBlack;
     padding: 40px 0 20px;
     }
 .contactContainer{
@@ -242,9 +248,10 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
         width: 40px;
         padding: 10px;
         &.mail{padding: 12px;}
-        &:hover{background: white;}
+        &:hover{background: lighten($mainBlue,15%);}
         &:first-child{margin-left: 0;}
         &:last-child{margin-right: 0;}
-        svg{fill:$lightBlack}
+        svg{fill:$mainBlack}
         }
-	
+
+@import "media-queries";
