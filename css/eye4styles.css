@@ -91,10 +91,19 @@ p {
 .introSection {
   background: #1e1e1e; }
 
+.mainLogo {
+  position: relative; }
+
 .navSection {
-  background: url("../images/eye-pattern.png") repeat, linear-gradient(to bottom, transparent 80%, rgba(0, 0, 0, 0.1));
-  height: 93px;
+  position: relative;
   margin-bottom: 50px; }
+  .navSection::before {
+    position: absolute;
+    content: "";
+    background: url("../images/eye-pattern.png") repeat, linear-gradient(to bottom, transparent 80%, rgba(0, 0, 0, 0.1));
+    height: 93px;
+    left: 0;
+    right: 0; }
 
 .navContainer {
   align-content: center;
@@ -105,7 +114,7 @@ p {
   align-items: center;
   display: flex;
   font: 300 normal 1.8em/1 "Oswald";
-  height: 93px; }
+  padding-top: 35px; }
   .mainNav a {
     color: #9e9e9e;
     margin-left: 20px;
@@ -115,6 +124,18 @@ p {
       color: white; }
     .mainNav a.active {
       color: #00a9d3; }
+
+.nav-collapse .navLinks {
+  display: flex; }
+
+#menu-icon {
+  display: none;
+  position: relative;
+  z-index: 2; }
+  #menu-icon svg {
+    fill: white; }
+  #menu-icon.active svg {
+    fill: #00a9d3; }
 
 .tileSection {
   font: 200 normal 1.8em/0 "Titillium";
@@ -277,6 +298,41 @@ p {
 
   .teamImg {
     max-width: 200px; } }
+@media screen and (max-width: 640px) {
+  .mainLogo {
+    margin-left: 15px;
+    z-index: 1; }
+
+  .navContainer {
+    padding: 0; }
+
+  .nav-collapse .navLinks {
+    display: block; }
+
+  #menu-icon {
+    display: inline-block;
+    margin: 39px 0 0 0;
+    position: absolute;
+    right: 10px; }
+
+  .mainNav {
+    padding-top: 0;
+    margin: -23px 0 0;
+    width: 100%; }
+
+  .navLinks li {
+    background: linear-gradient(to bottom, #1e1e1e 80%, #111111);
+    border-top: 1px solid rgba(158, 158, 158, 0.2);
+    height: auto; }
+    .navLinks li:hover {
+      background: linear-gradient(to bottom, #1e1e1e 60%, #111111);
+      transition: 300ms background ease-in-out; }
+    .navLinks li a {
+      color: white;
+      display: block;
+      padding: 15px;
+      margin: 0;
+      text-align: right; } }
 @media screen and (max-width: 540px) {
   .oneThird, .oneFifth {
     width: 100%;

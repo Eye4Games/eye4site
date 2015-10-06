@@ -7,6 +7,47 @@
     .teamImg{max-width: 200px;}
     }
     
+@media screen and (max-width: 640px){
+    .mainLogo{
+        margin-left: 15px;
+        z-index: 1;
+        }
+    .navContainer{
+        padding: 0;
+        }
+    .nav-collapse .navLinks{
+		display: block;
+		}
+    #menu-icon{
+		display: inline-block;
+		margin:39px 0 0 0;
+		position: absolute;
+		right: 10px;
+		}
+	.mainNav{
+    	padding-top: 0;
+    	margin: -23px 0 0;
+    	width: 100%;
+    	}
+	.navLinks li{
+		background: linear-gradient(to bottom, $mainBlack 80%, darken($mainBlack,5%));
+		border-top: 1px solid rgba($midBlack,.2);
+		height: auto;
+		&:hover{
+    		background: linear-gradient(to bottom, $mainBlack 60%, darken($mainBlack,5%));
+    		transition: 300ms background ease-in-out;
+		    }
+		a{
+    		color: white;
+			display: block;
+			padding: 15px;
+			margin: 0;
+			text-align: right;
+			}
+		}    
+
+}
+    
 @media screen and (max-width:540px){
     .oneThird, .oneFifth{
         width: 100%;
@@ -14,3 +55,4 @@
         &:last-child{margin-bottom: 0;}
         }
     }
+    
