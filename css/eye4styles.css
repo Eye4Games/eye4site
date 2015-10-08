@@ -36,12 +36,18 @@ table {
   border-spacing: 0; }
 
 .navContainer, .tileSection, .textContainer, .teamContainer, .formContainer, .contactContainer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   max-width: 980px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 *, * + * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
@@ -67,11 +73,14 @@ img {
   width: 20%;
   padding: 0 15px; }
 
-h2, h3 {
+h1, h2, h3 {
   display: block;
   margin: 0 auto 20px;
   text-align: center;
   text-transform: uppercase; }
+
+h1 {
+  font: 300 normal 4em/1 "Oswald"; }
 
 h2 {
   font: 300 normal 3.6em/1 "Oswald"; }
@@ -96,22 +105,32 @@ p {
 
 .navSection {
   position: relative;
-  margin-bottom: 50px; }
+  margin-bottom: 20px; }
   .navSection::before {
     position: absolute;
     content: "";
+    background: url("../images/eye-pattern.png") repeat, -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), to(rgba(0, 0, 0, 0.1)));
+    background: url("../images/eye-pattern.png") repeat, -webkit-linear-gradient(top, transparent 80%, rgba(0, 0, 0, 0.1));
     background: url("../images/eye-pattern.png") repeat, linear-gradient(to bottom, transparent 80%, rgba(0, 0, 0, 0.1));
     height: 93px;
     left: 0;
     right: 0; }
 
 .navContainer {
+  -ms-flex-line-pack: center;
+  -webkit-align-content: center;
   align-content: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0 15px; }
 
 .mainNav {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   font: 300 normal 1.8em/1 "Oswald";
   padding-top: 35px; }
@@ -122,10 +141,14 @@ p {
     text-transform: uppercase; }
     .mainNav a:hover {
       color: white; }
-    .mainNav a.active {
-      color: #00a9d3; }
+    .mainNav a.external {
+      color: white; }
+      .mainNav a.external:hover {
+        color: #00a9d3; }
 
 .nav-collapse .navLinks {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex; }
 
 #menu-icon {
@@ -149,6 +172,8 @@ p {
     position: absolute;
     content: "";
     border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 169, 211, 0.1)), to(rgba(0, 169, 211, 0.7)));
+    background: -webkit-linear-gradient(top, rgba(0, 169, 211, 0.1), rgba(0, 169, 211, 0.7));
     background: linear-gradient(to bottom, rgba(0, 169, 211, 0.1), rgba(0, 169, 211, 0.7));
     opacity: 1;
     width: 100%;
@@ -160,22 +185,34 @@ p {
     z-index: 1; }
   .gameTile:hover::before {
     opacity: 0;
+    -webkit-transition: 350ms opacity ease-in-out;
     transition: 350ms opacity ease-in-out; }
 
 .gameTileImg {
   border-radius: 50%;
+  -webkit-box-shadow: 0 2px 2px #040404;
   box-shadow: 0 2px 2px #040404; }
   .gameTileImg:hover {
+    -webkit-box-shadow: 0 4px 2px black;
     box-shadow: 0 4px 2px black; }
 
 .siteButton {
   background: #9e9e9e;
   border-radius: 5px;
-  color: white;
-  padding: 10px 15px;
+  padding: 10px 15px 6px;
   position: relative;
   text-decoration: none;
-  z-index: 2; }
+  z-index: 2;
+  -webkit-appearance: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Titillium";
+  font-size: .75em;
+  font-weight: 600;
+  position: relative;
+  text-transform: uppercase; }
+  .siteButton:hover {
+    background: #c4c4c4; }
 
 .aboutSection {
   padding: 40px 10px;
@@ -191,10 +228,14 @@ p {
   .textContainer h2 {
     color: #9e9e9e; }
   .textContainer h2, .textContainer p {
+    -webkit-flex: 0 0  100%;
+    -ms-flex: 0 0  100%;
     flex: 0 0  100%; }
 
 .teamContainer {
   color: white;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 20px; }
   .teamContainer h4 {
@@ -257,11 +298,11 @@ p {
     position: absolute;
     border-top: 2px dotted #6b6b6b;
     content: "";
-    width: 100%;
+    width: 95%;
     left: 0;
     right: 0;
     display: block;
-    margin-top: -22px;
+    margin: -22px auto 0;
     z-index: 0; }
 
 .contactSection {
@@ -269,13 +310,15 @@ p {
   padding: 40px 0 20px; }
 
 .contactContainer {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center; }
 
 .contactIcon {
   background: #00a9d3;
   border-radius: 50%;
   line-height: 0;
-  margin: 20px 10px;
+  margin: 0 10px;
   width: 40px;
   padding: 10px; }
   .contactIcon.mail {
@@ -291,13 +334,10 @@ p {
 
 @media screen and (max-width: 768px) {
   .oneFifth {
-    width: 50%;
+    width: 33.3333333333333333%;
     margin-bottom: 20px; }
     .oneFifth:last-child {
-      margin-bottom: 0; }
-
-  .teamImg {
-    max-width: 200px; } }
+      margin-bottom: 0; } }
 @media screen and (max-width: 640px) {
   .mainLogo {
     margin-left: 15px;
@@ -321,11 +361,16 @@ p {
     width: 100%; }
 
   .navLinks li {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #1e1e1e), to(#111111));
+    background: -webkit-linear-gradient(top, #1e1e1e 80%, #111111);
     background: linear-gradient(to bottom, #1e1e1e 80%, #111111);
     border-top: 1px solid rgba(158, 158, 158, 0.2);
     height: auto; }
     .navLinks li:hover {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #1e1e1e), to(#111111));
+      background: -webkit-linear-gradient(top, #1e1e1e 60%, #111111);
       background: linear-gradient(to bottom, #1e1e1e 60%, #111111);
+      -webkit-transition: 300ms background ease-in-out;
       transition: 300ms background ease-in-out; }
     .navLinks li a {
       color: white;
@@ -333,9 +378,17 @@ p {
       padding: 15px;
       margin: 0;
       text-align: right; } }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 480px) {
   .oneThird, .oneFifth {
     width: 100%;
-    margin-bottom: 20px; }
+    margin-bottom: 40px; }
     .oneThird:last-child, .oneFifth:last-child {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+
+  .gameTile::before {
+    background: none; }
+
+  .teamImg {
+    max-width: 200px; } }
+
+
