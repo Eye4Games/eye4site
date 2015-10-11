@@ -4,7 +4,7 @@ $mainBlack:#1e1e1e;
 $midBlack:lighten($mainBlack,50%);
 $lightBlack:lighten($mainBlack,30%);
 $mainBlue:#00a9d3;
-$hoverBlue:lighten($mainBlue,15%);
+$hoverBlue:lighten($mainBlue,5%);
 $mainWidth:980px;
 
 %container{
@@ -114,6 +114,7 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
 .tileSection{
 	@extend %container;
 	font: 200 normal 1.8em/0 "Titillium";
+	justify-content: center;
 	padding: 0 0 40px;
 	text-align: center;
 	}
@@ -144,22 +145,37 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
 	box-shadow: 0 2px 2px darken($mainBlack,10%);
 	&:hover{box-shadow: 0 4px 2px darken($mainBlack,20%);}
 	}
-.siteButton{
-	background: $midBlack;
-	border-radius: 5px;
-	padding: 10px 15px 6px;
-	position: relative;
-	text-decoration: none;
-	z-index: 2;
+[class$="Button"]{
 	-webkit-appearance: none;
+	border-radius: 5px;
+	border-top: 1px solid rgba(white,.2);
+	box-shadow: 0 1px 2px $mainBlack;
 	color: white;
-	cursor: pointer;
 	font-family: "Titillium";
-	font-size: .75em;
 	font-weight: 600;
 	position: relative;
 	text-transform: uppercase;
-	&:hover{background: lighten($midBlack,15%)}
+	&:hover{text-shadow: 0 1px 2px $mainBlack;}
+	}
+.siteButton{
+	background: $lightBlack;
+	padding: 10px 8px 6px;
+	position: relative;
+	text-decoration: none;
+	font-size: .75em;
+	z-index: 2;
+	&:hover{
+		background: lighten($lightBlack,10%);
+		}
+	&.halfButton{border-radius: 5px 0 0 5px;}
+	}
+.buyButton{
+	@extend .siteButton;
+	background: $mainBlue;
+	margin-left: -4px;
+	z-index: 1;
+	&:hover{background: $hoverBlue;}
+	&.halfButton{border-radius: 0 5px 5px 0;}
 	}	
 	
 //
@@ -229,15 +245,10 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
 		}
 	}
 .submitButton{
-    -webkit-appearance: none;
 	background: $mainBlue;
-	color: white;
+	box-shadow: 0 1px 2px rgba($mainBlack,.2);
 	cursor: pointer;
-	font-family: "Titillium";
 	font-size: 1.6em;
-	font-weight: 600;
-	position: relative;
-	text-transform: uppercase;
 	z-index: 1;
 	&:hover{
     	background: $hoverBlue;
@@ -264,6 +275,7 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
 .contactSection{
     background: $mainBlack;
     padding: 40px 0 20px;
+    
     }
 .contactContainer{
     @extend %container;
@@ -277,10 +289,20 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
         width: 40px;
         padding: 10px;
         &.mail{padding: 12px;}
-        &:hover{background: $hoverBlue;}
+        &:hover{background: lighten($mainBlue, 15%);}
         &:first-child{margin-left: 0;}
         &:last-child{margin-right: 0;}
         svg{fill:$mainBlack}
         }
+.copyrightSection{
+	background: url("../images/eye-pattern.png") repeat, linear-gradient(to top, rgba(black,0) 80%,rgba(black,.1)), $mainBlack;
+	color: white;
+	padding: 15px 0;
+	text-align: center;
+	small{
+	    font: 300 normal 1.2em/1 "Titillium";
+	    margin: 20px auto 0;
+    	}
+	}
 
 @import "media-queries";
