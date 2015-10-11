@@ -1,4 +1,9 @@
 @media screen and (max-width:768px){
+	.oneThird{
+		width: 50%;
+		margin-bottom: 50px;
+        &:last-child{margin-bottom: 0;}
+		}
     .oneFifth{
         width: 33.3333333333333333%;
         margin-bottom: 20px;
