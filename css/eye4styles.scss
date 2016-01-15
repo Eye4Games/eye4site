@@ -52,7 +52,12 @@ h3{font: 300 normal 2.4em/1 "Titillium";}
 h4{font: 600 normal 1.4em/1 "Titillium";}
 h5{font: 300 normal 1.2em/1 "Titillium";}
 p{font: 200 normal 1.8em/1.7em "Titillium";}
-
+p i{font-style: italic;}
+p a{
+    color: lighten($mainBlue,10%);
+    border-bottom: 1px dotted $midBlack;
+    text-decoration: none;
+    }
 //
 //******************************************************START
 .introSection{
@@ -209,6 +214,15 @@ p{font: 200 normal 1.8em/1.7em "Titillium";}
 .teamImg{
     border-radius: 50%;
     }
+    
+//
+//**********************************************ANNOUNCEMENTS
+.announcementSection{
+    border-top: 2px solid $mainBlue;
+    padding: 40px 10px;
+    text-align: center;
+    }
+
 
 //
 //*************************************************NEWSLETTER
