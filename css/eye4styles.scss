@@ -56,7 +56,7 @@ h3{font: 300 normal 2.4em/1 "Titillium";}
 h4{font: 600 normal 1.4em/1 "Titillium";}
 h5{font: 300 normal 1.2em/1 "Titillium";}
 p{font: 200 normal 1.8em/1.7em "Titillium";}
-p i{font-style: italic;}
+p i, p em{font-style: italic;}
 p a{
     color: lighten($mainBlue,10%);
     border-bottom: 1px dotted $midBlack;

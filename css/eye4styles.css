@@ -95,7 +95,7 @@ h5 {
 p {
   font: 200 normal 1.8em/1.7em "Titillium"; }
 
-p i {
+p i, p em {
   font-style: italic; }
 
 p a {
