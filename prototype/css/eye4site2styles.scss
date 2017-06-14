@@ -317,6 +317,7 @@ header{
 		}
 	}
 .submitButton{
+    -webkit-appearance: none;
 	background: $mainBlue;
 	box-shadow: 0 1px 2px rgba($mainBlack,.2);
 	cursor: pointer;
