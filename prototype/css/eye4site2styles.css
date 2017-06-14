@@ -466,6 +466,19 @@ header {
     .gameTile:last-child {
       margin-bottom: 0; } }
 
+@media screen and (max-width: 35em) {
+  .aboutSection .halfWidth {
+    flex-wrap: wrap;
+    flex-basis: 100%; }
+    .aboutSection .halfWidth:nth-child(odd) {
+      margin-right: auto; }
+    .aboutSection .halfWidth:nth-child(even) {
+      margin-left: auto; }
+  .aboutSection .teamContainer {
+    margin-bottom: 2em;
+    text-align: center;
+    justify-content: center; } }
+
 @media screen and (max-width: 27.813em) {
   .gameShowcase {
     margin-left: 2%;
@@ -494,5 +507,10 @@ header {
   .gameInfo {
     margin-left: 0;
     margin-top: 1em; }
+  .gameTitle, .gameData {
+    display: none; }
   .aboutSection {
-    text-align: center; } }
+    padding-left: 4%;
+    padding-right: 4%; }
+    .aboutSection .thirdWidth {
+      flex-basis: 48%; } }
