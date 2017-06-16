@@ -70,6 +70,9 @@ p {
     color: #00a9d3;
     margin-bottom: -4px;
     text-decoration: none; }
+    p a:hover {
+      color: #00bdec;
+      border-bottom-color: #6b6b6b; }
   p + p {
     margin-top: 1em; }
 
@@ -325,6 +328,8 @@ header {
   text-align: center; }
   .announcementSection h1 {
     color: #00a9d3; }
+  .announcementSection .textContainer {
+    max-width: 780px; }
 
 .newsletterSection {
   background: #9e9e9e;

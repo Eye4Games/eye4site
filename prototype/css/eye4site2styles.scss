@@ -52,6 +52,10 @@ p{
         color: $mainBlue;
         margin-bottom: -4px;
         text-decoration: none;
+        &:hover{
+            color: $hoverBlue;
+            border-bottom-color: $lightBlack;
+            }
         }
     & + p{margin-top: 1em;}
     }
@@ -273,6 +277,9 @@ header{
     text-align: center;
     h1{
         color: $mainBlue;
+        }
+    .textContainer{
+        max-width: 780px;
         }
     }
     
