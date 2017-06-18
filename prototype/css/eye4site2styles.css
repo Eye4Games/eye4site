@@ -41,7 +41,7 @@ table {
 body {
   background: #1e1e1e;
   font-size: 62.5%;
-  font-family: "Titillium Web";
+  font-family: 'Titillium Web', sans-serif;
   text-rendering: optimizeLegibility; }
 
 img {
@@ -54,15 +54,15 @@ h1, h2, h3, h4 {
   width: 100%; }
 
 h1 {
-  font: 400 normal 3.6em/1 "Oswald";
+  font: 400 normal 3.6em/1 "Oswald", sans-serif;
   margin-bottom: 30px; }
 
 h2 {
-  font: 600 normal 2.4em/1 "Oswald";
+  font: 600 normal 2.4em/1 "Oswald", sans-serif;
   margin-bottom: 20px; }
 
 p {
-  font: 300 normal 1.8em/1.8em "Titillium Web"; }
+  font: 300 normal 1.8em/1.8em "Titillium Web", sans-serif; }
   p em {
     font-style: italic; }
   p a {
@@ -367,7 +367,7 @@ header {
         margin-left: 0;
         margin-right: 0; }
     .inputContainer input[type="text"][placeholder], .inputContainer input[type="email"][placeholder] {
-      font: 400 normal 1.6em/1 "Titillium Web"; }
+      font: 400 normal 1.6em/1 "Titillium Web", sans-serif; }
     .inputContainer input[type="text"]:focus, .inputContainer input[type="email"]:focus {
       box-shadow: 0 0 6px rgba(30, 30, 30, 0.5); }
 
