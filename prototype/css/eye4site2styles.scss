@@ -20,7 +20,7 @@ $alakaRibbon:#009345 0%,darken(#009345,15%) 100%;
 body{
     background: $mainBlack;
     font-size: 62.5%;
-    font-family: "Titillium";
+    font-family: "Titillium Web";
     text-rendering: optimizeLegibility;
     }
 img{
@@ -45,7 +45,7 @@ h2{
     margin-bottom: 20px;
     }
 p{
-    font: 300 normal 1.8em/1.8em "Titillium";
+    font: 300 normal 1.8em/1.8em "Titillium Web";
     em{font-style: italic;}
     a{
         border-bottom: 2px dotted rgba($mainBlue,.2);
@@ -112,6 +112,8 @@ $mainWidth:1160px;
 
 @import 'menu';
 .headerWrap{
+    background-image: url(../images/eye-pattern.png);
+    background-repeat: repeat;
     box-shadow: inset 0 -.5em 1em rgba(black,.2);
     }
 header{
@@ -317,7 +319,7 @@ header{
         	max-width: 48%;
     		&:nth-child(even),&:nth-child(odd){margin-left: 0; margin-right: 0;}
     		}
-		&[placeholder]{font: 400 normal 1.6em/1 "Titillium";}
+		&[placeholder]{font: 400 normal 1.6em/1 "Titillium Web";}
 		&:focus{
     		box-shadow: 0 0 6px rgba($mainBlack,.5);
 		    }
