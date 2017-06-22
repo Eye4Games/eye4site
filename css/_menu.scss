@@ -1,0 +1,86 @@
+
+//
+//***************************************RESPONSIVE NAV
+
+/* checkboxes invisible and use no space */
+.menuIcon + input[type=checkbox] {
+      opacity: 0;
+      height: 0;
+      width: 0;     
+     }
+.navList{
+    text-align: right;
+    }
+.navLinks{
+    a{
+        border-bottom: 1px solid transparent;
+        color: white;
+        display: inline-block;
+        font-family: "Oswald";
+        font-size: 2em;
+        padding: 1em 0 .25em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: border-bottom ease-in-out 300ms;
+        &:hover{
+            color: $mainBlue;
+            border-bottom: 1px dotted $lightBlack;
+            transition: border-bottom ease-in-out 300ms;
+            }
+        }
+    }
+     
+//Until small     
+@media screen and (min-width: 34em){
+
+.menuIcon, .menuCheck{
+    display: none;
+    }
+.navLinks{
+    display: flex;
+    a{margin-left: 1em;}
+    }
+
+}
+
+//At mobile size
+@media screen and (max-width: 34em){
+.menuCheck{
+    display: inline;
+    }
+/* cursor changes when you mouse over this class */
+.menuIcon {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    user-select: none;
+    svg{
+        display: inline-block;
+        fill: white;
+        max-width: 40px;
+        }
+    }                       
+ /* prevents sublists below unchecked labels from displaying */
+.menuIcon + input[type=checkbox] + ol
+         {
+            height: 0;
+            overflow: hidden;
+            transition: height ease-in-out 300ms;
+         }
+/* display submenu on click */
+.menuIcon + input[type=checkbox]:checked + ol
+            {
+            display: block;
+            // number of links * 5 + 1
+            height: 3*5em+1em;
+            overflow: auto;  
+            transition: height ease-in-out 300ms;
+            }
+.navList{
+    margin-top: 2em;
+    }
+.navLinks{
+    display: block;
+    }
+
+}
