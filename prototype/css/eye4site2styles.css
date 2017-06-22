@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,600|Titillium+Web:300,300i,600,900");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -53,16 +54,26 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   width: 100%; }
 
+h1, h2 {
+  font-family: 'Oswald', sans-serif; }
+
 h1 {
-  font: 400 normal 3.6em/1 "Oswald", sans-serif;
+  font-size: 3.6em;
+  font-weight: 400;
+  line-height: 1;
   margin-bottom: 30px; }
 
 h2 {
-  font: 600 normal 2.4em/1 "Oswald", sans-serif;
+  font-size: 2.4em;
+  font-weight: 600;
+  line-height: 1;
   margin-bottom: 20px; }
 
 p {
-  font: 300 normal 1.8em/1.8em "Titillium Web", sans-serif; }
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.8em;
+  font-weight: 300;
+  line-height: 1.8em; }
   p em {
     font-style: italic; }
   p a {
@@ -367,7 +378,7 @@ header {
         margin-left: 0;
         margin-right: 0; }
     .inputContainer input[type="text"][placeholder], .inputContainer input[type="email"][placeholder] {
-      font: 400 normal 1.6em/1 "Titillium Web", sans-serif; }
+      font: 300 normal 1.6em/1 "Titillium Web", sans-serif; }
     .inputContainer input[type="text"]:focus, .inputContainer input[type="email"]:focus {
       box-shadow: 0 0 6px rgba(30, 30, 30, 0.5); }
 
@@ -420,8 +431,10 @@ header {
   margin-bottom: 2em;
   padding: 0 3%; }
   .teamTile h4 {
-    font-size: 1.2em;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
     font-weight: 600;
+    line-height: 1.2em;
     padding-bottom: .5em;
     text-transform: none; }
 

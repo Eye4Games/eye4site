@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,600|Titillium+Web:300,300i,600,900');
 @import 'reset';
 
 $mainBlack:#1e1e1e;
@@ -36,16 +37,29 @@ h1, h2, h3, h4{
     text-transform: uppercase;
     width: 100%;
     }
+h1, h2{
+    font-family: 'Oswald', sans-serif;
+    }
 h1{
-    font: 400 normal 3.6em/1 'Oswald', sans-serif;
+    font-size: 3.6em;
+    font-weight: 400;
+    line-height: 1;
+    //font: 400 normal 3.6em/1 'Oswald', sans-serif;
     margin-bottom: 30px;
     }
 h2{
-    font: 600 normal 2.4em/1 'Oswald', sans-serif;
+    font-size: 2.4em;
+    font-weight: 600;
+    line-height: 1;
+    //font: 600 normal 2.4em/1 'Oswald', sans-serif;
     margin-bottom: 20px;
     }
 p{
-    font: 300 normal 1.8em/1.8em 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.8em;
+    font-weight: 300;
+    line-height: 1.8em;
+    //font: 300 normal 1.8em/1.8em 'Titillium Web', sans-serif;
     em{font-style: italic;}
     a{
         border-bottom: 2px dotted rgba($mainBlue,.2);
@@ -319,7 +333,7 @@ header{
         	max-width: 48%;
     		&:nth-child(even),&:nth-child(odd){margin-left: 0; margin-right: 0;}
     		}
-		&[placeholder]{font: 400 normal 1.6em/1 'Titillium Web', sans-serif;}
+		&[placeholder]{font: 300 normal 1.6em/1 'Titillium Web', sans-serif;}
 		&:focus{
     		box-shadow: 0 0 6px rgba($mainBlack,.5);
 		    }
@@ -376,8 +390,10 @@ header{
     margin-bottom: 2em;
     padding: 0 3%;
     h4{
-        font-size: 1.2em;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.4em;
         font-weight: 600;
+        line-height: 1.2em;
         padding-bottom: .5em;
         text-transform: none;
         } 
