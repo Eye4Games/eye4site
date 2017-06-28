@@ -87,7 +87,7 @@ p {
   p + p {
     margin-top: 1em; }
 
-.textContainer, header, .gameShowcaseContainer, .aboutContainer, .socialLinks {
+.textContainer, header, .gameShowcaseContainer, .devShowcaseContainer, .aboutContainer, .socialLinks {
   display: flex;
   margin: 0 auto;
   max-width: 1160px;
@@ -332,6 +332,55 @@ header {
     background-color: #aaaaaa;
     box-shadow: 0 0.25em 0.35em rgba(0, 0, 0, 0.5);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
+
+.devShowcaseContainer {
+  justify-content: flex-start;
+  padding: 5em 2%; }
+  .devShowcaseContainer h1 {
+    color: white;
+    text-align: center; }
+
+.devTile {
+  align-content: flex-start;
+  display: flex;
+  flex: 0 0 23%;
+  flex-wrap: wrap;
+  margin: 0 1% 3em; }
+  .devTile .gameInfo {
+    margin-left: 0;
+    margin-top: 1em; }
+  .devTile p {
+    font-size: 1em; }
+  .devTile h4 {
+    font-weight: bold;
+    margin-top: .5em; }
+
+.devProgress {
+  border-top: 5px solid rgba(255, 255, 255, 0.5);
+  position: relative; }
+  .devProgress::after {
+    content: '';
+    border: 2.5px solid #00a9d3;
+    position: absolute;
+    top: -5px;
+    left: 0; }
+  .devProgress.minProgress::after {
+    width: 12.5%; }
+  .devProgress.minorProgress::after {
+    width: 25%; }
+  .devProgress.midProgress::after {
+    width: 50%; }
+  .devProgress.muchProgress::after {
+    width: 75%; }
+
+.devProgress::before {
+  content: '';
+  background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0.1), rgba(30, 30, 30, 0.5));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 .announcementSection {
   background-color: #dddddd;
