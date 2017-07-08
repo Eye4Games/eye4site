@@ -328,12 +328,28 @@ header{
     &.muchProgress::after{width: 75%;}
     }
 
-.devProgress::before{
-    content: '';
-    background-image: linear-gradient(to bottom, rgba($mainBlack,.1), rgba($mainBlack,.5));;
+.statusBadge{
+    background-color: $mainBlue;
+    border-radius: 2px;
+    box-shadow: 0 .2em .5em rgba(black,.2);
+    color: white;
+    padding: .5em .8em;
     position: absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
+    text-decoration: none;
+    bottom: 12px;
+    right: 10px;
     }
+.devProgress{
+    position: relative;
+    &::before{
+        content: '';
+        background-image: linear-gradient(to bottom, rgba($mainBlack,.1), rgba($mainBlack,.5));;
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        }
+    }
+
+
     
 //
 //**********************************************ANNOUNCEMENTS
