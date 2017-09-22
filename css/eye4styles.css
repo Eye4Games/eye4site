@@ -560,7 +560,9 @@ header {
   .aboutSection .teamContainer {
     margin-bottom: 2em;
     text-align: center;
-    justify-content: center; } }
+    justify-content: center; }
+  .devTile {
+    flex: 0 0 48%; } }
 
 @media screen and (max-width: 27.813em) {
   .gameShowcase {
@@ -596,4 +598,7 @@ header {
     padding-left: 4%;
     padding-right: 4%; }
     .aboutSection .thirdWidth {
-      flex-basis: 48%; } }
+      flex-basis: 48%; }
+  .devTile {
+    flex: 0 0  100%;
+    margin: 0 0 3em; } }
