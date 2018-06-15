@@ -1,0 +1,507 @@
+//
+//***************************************************UNIVERSAL
+@import 'reset';
+
+// Palette
+$mainBlack:#313737;
+$lightBlack: #BCCAD0;
+$darkerBlack: #252529;
+$darkestBlack:#1A1A1A;
+$mainBlue:#29ABE2;
+$labYellow: #FFC60B;
+
+$aloftRibbon:#CCE0F4 0%,darken(#CCE0F4,40%) 100%;
+$riseRibbon:#BF1A24 0%,darken(#BF1A24,20%) 100%;
+$clairRibbon:#742C6C 0%,darken(#742C6C,12%) 100%;
+$alakaRibbon:#009345 0%,darken(#009345,15%) 100%;
+
+
+
+*,*+*{
+    box-sizing: border-box;
+    }
+body{
+    background: $mainBlack;
+    color: white;
+    font-size: 62.5%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+    }
+img{
+	max-width: 100%;
+	height: auto;
+	}
+
+//
+//*****************************************************LAYOUT
+$mainWidth: 1160px;
+
+%container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: $mainWidth;
+    justify-content: space-between;
+    }  
+.oneHalf{
+    flex: 1 1 48%;
+    &:nth-child(odd){margin-right: 1%;}
+    &:nth-child(even){margin-left: 1%;}
+    }
+.oneThird{
+    flex: 0 1 32%;
+    &:nth-child(2n){
+        margin-left: 1%;
+        margin-right: 1%;
+        }
+    }
+.oneFourth{
+    flex: 0 1 23.5%;
+    }
+//
+//***************************************************ELEMENTS
+.button{
+    background-color: $lightBlack;
+    border-radius: .2em;
+    color: white;
+    font-size: 1.6em;
+    font-weight: 700;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    }
+.button + .button{
+    margin-left: 10px;
+    }
+.buyButton{
+    background-color: $mainBlue;
+    }
+//
+//*************************************************TYPOGRAPHY
+h1{
+    color: rgba($lightBlack,.5);
+    display: flex;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 3.6em;
+    margin-bottom: .5em;
+    }
+h2{
+    font-size: 2.4em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: $lightBlack;
+    display: block;
+    margin-bottom: 15px;
+    }
+h3{
+    font-size: 2.4em;
+    font-weight: 700;
+    margin-bottom: .25em;
+    }
+h4{
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 1.2em;
+    padding-bottom: .5em;
+    }
+h5{
+    font-size: 1.4em;
+    }
+p,
+ul > li{
+    font-size: 1.6em;
+    line-height: 1.5em;
+    strong{
+        font-weight: 700;
+        }
+    em{
+        font-style: italic;
+        }
+    }
+p a{
+    border-bottom: 2px dotted rgba($mainBlue,.2);
+    color: $mainBlue;
+    text-decoration: none;
+    }
+
+//
+//*****************************************************HEADER
+.header{
+    padding: 0 25px;
+    }
+.headerWrap{
+    @extend %container;
+    }
+.mainHeader{
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px;
+    width: 100%;
+    }
+//**************************************Logo
+.logo{
+    display: flex;
+    max-height: 75px;
+    max-width: 239px;
+    margin-top: 13px;
+    }
+.logo svg{
+    .eye-symbol, .eye-word{
+        fill: white;
+        }
+    .games-word{
+        fill: $mainBlue;
+        }
+    }
+.logo:hover svg{
+    .eye-symbol{fill: $mainBlue;}
+    }
+//*********************************Navigation
+.mainNav{
+    display: flex;
+    }
+@import 'menu';
+
+.active{
+    a{color: $mainBlue;}
+    &.labs a{color: $labYellow;}
+    }
+
+//
+//*******************************************************MAIN
+
+//************************************Games
+.gameShowcase{
+    background-color: $darkerBlack;
+    padding: 20px 25px 25px;
+    }
+.gameShowcaseWrap,
+.gameShowcaseTitle{
+    @extend %container;
+    }
+.gameShowcaseTitle{
+    background-image: linear-gradient(to bottom, transparent 47%, $lightBlack 48%, transparent 50%);
+    h1{
+        background-color: $darkerBlack;
+        padding-right: 5px;
+        }
+    }
+.gameTile{
+    align-items: flex-start;
+    background-color: $mainBlack;
+    box-shadow: 0 2px 3px $darkestBlack;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    &::before{
+        background-color: transparent;
+        content: '';
+        position: absolute;
+        height: 5px;
+        top: -5px; left: 0; right: 0;
+        }
+    &.riseGame{
+        &::before{background-image: linear-gradient(to right,$riseRibbon);} 
+        }
+    &.clairGame{
+        &::before{background-image: linear-gradient(to right,$clairRibbon);} 
+        }
+    &.alakaGame{
+        &::before{background-image: linear-gradient(to right,$alakaRibbon);} 
+        }
+    }
+.gameLink{
+    position: relative;
+    line-height: 0;
+    &::after{
+        background-image: linear-gradient(to bottom, rgba($mainBlue,.1), rgba($mainBlue,.5));
+        content: '';
+        cursor: pointer;
+        mix-blend-mode: hard-light;
+        position: absolute;
+        left: 0; top: 0; right: 0; bottom: 0;
+        transition: 100ms opacity ease-in-out;
+        }
+    &:hover::after{
+        opacity: 0;
+        }
+    }
+.gameData{
+    flex-basis: 100%;
+    padding: 10px 10px 15px;
+    time{
+        color: $lightBlack;
+        display: block;
+        font-size: 1.6em;
+        margin-bottom: .5em;
+        }
+    }
+.ctaSection{
+    align-self: flex-end;
+    padding: 0 10px 15px;
+    display: flex;
+    width: 100%;
+    .button{
+        width: 48%;
+        }
+    }
+//*****************************Announcements
+.announcement{
+    background-color: $darkerBlack;
+    padding: 20px 25px 25px;
+    }
+.announcementWrap{
+    @extend %container;
+    background-color: lighten($mainBlack,10%);
+    padding: 15px;
+    max-width: $mainWidth*.75;
+    }
+//*********************************Newsletter
+.newsletter{
+    background-color: $darkerBlack;
+    padding: 20px 25px 25px;
+    text-align: center;
+    h1{
+        display: block;
+        width: 100%;
+        }
+    }
+.newsletterWrap{
+    @extend %container;
+    max-width: $mainWidth*.33;
+    }
+.subscribeButton{
+    background: $darkerBlack;
+    border: 2px solid $mainBlue;
+    color: $mainBlue;
+	box-shadow: 0 1px 2px rgba($mainBlack,.2);
+	padding: 10px 16px;
+	width: 100%;
+	&:hover{
+    	background-color: $mainBlue;
+    	color: $darkerBlack;
+	    }
+    }
+//*********************In Development Summary
+.inDevelopment{
+    background-color: $darkestBlack;
+    padding: 25px 25px 30px;
+    }
+.inDevelopmentWrap,
+.inDevelopmentTitle{
+    @extend %container;
+    }
+.inDevelopmentTitle{
+    background-image: linear-gradient(to bottom, transparent 47%, $lightBlack 48%, transparent 50%);
+    h1{
+        background-color: $darkestBlack;
+        padding-right: 5px;
+        }
+    }
+.devTileMini, .devTileMore{
+    box-shadow: 0 2px 3px black;
+    }
+.devTileMore{
+    background-color: $mainBlack;
+    text-align: center;
+    position: relative;
+    &:hover{
+        background-color: $darkerBlack;
+        a {color: $mainBlue;}
+        }
+    a{
+        color: white;
+        display: flex;
+        font-size: 2.4em;
+        flex-basis: 100%;
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right:0;
+        text-decoration: none;
+        }
+    span{
+        align-self: center;
+        flex-basis: 100%;
+        }
+    }
+.devProgress{
+    border-top: 5px solid rgba(white,.5);
+    position: relative;
+    &::after{
+        content: '';
+        border: 2.5px solid $mainBlue;
+        position: absolute;
+        top: -5px; left: 0;
+        }
+    &.minProgress::after{width: 12.5%;}
+    &.minorProgress::after{width: 25%;}
+    &.midProgress::after{width: 50%;}
+    &.muchProgress::after{width: 75%;}
+    }
+
+.statusBadge{
+    background-color: $mainBlue;
+    border-radius: 2px;
+    box-shadow: 0 .2em .5em rgba(black,.2);
+    color: white;
+    padding: .5em .8em;
+    position: absolute;
+    text-decoration: none;
+    bottom: 12px;
+    right: 10px;
+    }
+    
+//************************************About
+.about{
+    background-color: $darkerBlack;
+    padding: 25px 25px 30px;
+    }
+.aboutWrap{
+    @extend %container;
+    }
+.majorCol{
+    width: 52.5%;
+    }
+.minorCol{
+    width: 42.5%;
+    }
+.aboutText{
+    p{
+        margin-bottom: 15px;
+        }
+    margin-bottom: 25px;
+    }
+.teamContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+.teamTile{
+    text-align: center;
+    margin-bottom: 25px;
+    width: 31%;
+    h4{
+        font-family: 'Oswald', sans-serif;
+        font-weight: 600;
+        }
+    }
+.teamImage{
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to bottom, $darkestBlack, $darkerBlack);
+    }
+
+//
+//*****************************************************FOOTER
+.mainFooter{
+    background-color: $mainBlack;
+    color: white;
+    padding: 2em 2%;
+    text-align: center;
+    }
+ .socialLinks{
+    @extend %container;
+    justify-content: center;
+    }    
+.socialLinks a{
+        background-color: $mainBlue;
+        border-radius: 50%;
+        line-height: 0;
+        margin: 0 10px;
+        width: 40px;
+        padding: 10px;
+        &.mail{padding: 12px;}
+        &:hover{background: lighten($mainBlue, 15%);}
+        &:first-child{margin-left: 0;}
+        &:last-child{margin-right: 0;}
+        svg{fill:$mainBlack}
+    }
+.copyright{
+    font-size: 1.4em;
+    margin-top: 1em;
+    }
+    
+//
+//*****************************************************EYE4LABS
+.labsIntro{
+    background-color: $darkerBlack;
+    padding: 25px 50px 30px;
+    }
+.labsIntroWrap{
+    @extend %container;
+    }
+.eye4lab-logo{
+    max-width: 25%;
+    }
+.labsIntroText{
+    align-self: center;
+    background-color: $mainBlack;
+    max-width: 70%;
+    padding: 25px;
+    }
+.labButton{
+    background-color: white;
+    color: $darkerBlack;
+    display: inline-block;
+    margin-top: 15px;
+    &:hover{
+        background-color: $labYellow;
+        }
+    }
+.labsShowcase{
+    background-color: $darkerBlack;
+    padding: 25px 25px 30px;
+    }
+.labsShowcaseYellow{
+    @extend %container;
+    background-color: $labYellow;
+    padding: 25px;
+    }
+.labsShowcaseTitle{
+    background-image: linear-gradient(to bottom, $labYellow 47%, white 48%, $labYellow 50%);
+    width: 100%;
+    h1{
+        background-color: $labYellow;
+        color: white;
+        display: inline-block;
+        padding-right: 5px;
+        }
+    }
+.labsShowcaseWrap{
+    @extend %container;
+    }
+.labTile{
+    background-color: lighten($labYellow,10%);
+    box-shadow: 0px 3px 5px rgba($mainBlack,.2);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    max-width: 49%;
+    padding: 15px;
+    &:last-child{
+        margin-bottom: 0;
+        }
+    }
+.labTile > div{
+    max-width: 48%;
+    }
+.labTile .gameImage img{
+    box-shadow: 0 2px 4px rgba($darkestBlack,.2);
+    margin-bottom: 10px;
+    }
+.tryButton{
+    background-color: $darkerBlack;
+    display: block;
+    &:hover{
+        background-color: $darkestBlack;
+        }
+    }
+.labTile .gameData{
+    color: $darkestBlack;
+    time{
+        color: white;
+        }
+    h4{
+        margin-top: 15px;
+        }
+    }

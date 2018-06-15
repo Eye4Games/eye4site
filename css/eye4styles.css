@@ -147,7 +147,7 @@ p {
     border-bottom: 1px dotted #6b6b6b;
     transition: border-bottom ease-in-out 300ms; }
 
-@media screen and (min-width: 34em) {
+@media screen and (min-width: 41em) {
   .menuIcon, .menuCheck {
     display: none; }
   .navLinks {
@@ -155,9 +155,12 @@ p {
     .navLinks a {
       margin-left: 1em; } }
 
-@media screen and (max-width: 34em) {
+@media screen and (max-width: 41em) {
   .menuCheck {
     display: inline; }
+  .logo svg {
+    position: absolute;
+    clip-path: inset(0 115px 0 0); }
   /* cursor changes when you mouse over this class */
   .menuIcon {
     cursor: pointer;
@@ -176,11 +179,11 @@ p {
   /* display submenu on click */
   .menuIcon + input[type=checkbox]:checked + ol {
     display: block;
-    height: 21em;
+    height: 26em;
     overflow: auto;
     transition: height ease-in-out 300ms; }
   .navList {
-    margin-top: 2em; }
+    margin-top: 3em; }
   .navLinks {
     display: block; } }
 

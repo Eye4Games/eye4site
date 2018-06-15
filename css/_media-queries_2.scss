@@ -1,0 +1,43 @@
+@media screen and (max-width:700px){
+    .gameShowcaseWrapper{
+        grid-template-areas: "header" "tile";
+        grid-template-columns: none;
+        }
+    .gameTile{
+        grid-template-areas: "image data" "image cta";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 42px;
+        }
+    .gameImg{
+        grid-area: image;
+        padding: 15px;
+        }
+    .gameData{
+        grid-area: data;
+        }
+    .ctaSection{
+        grid-area: cta;
+        }
+    .inDevelopmentWrap{
+        grid-template-areas: "header header" "tile tile";
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 30px;
+        }
+    .aboutWrap{
+        grid-template-columns: none;
+        }    
+    
+    }
+    
+@media screen and (max-width:500px){
+    .teamContainer{
+        grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+@media screen and (max-width:400px){
+    .inDevelopmentWrap{
+        grid-template-areas: "header" "tile";
+        grid-template-columns: none;
+        }
+    }

@@ -31,7 +31,7 @@
     }
      
 //Until small     
-@media screen and (min-width: 34em){
+@media screen and (min-width: 41em){
 
 .menuIcon, .menuCheck{
     display: none;
@@ -44,9 +44,13 @@
 }
 
 //At mobile size
-@media screen and (max-width: 34em){
+@media screen and (max-width: 41em){
 .menuCheck{
     display: inline;
+    }
+.logo svg{
+    position: absolute;
+    clip-path: inset(0 115px 0 0);
     }
 /* cursor changes when you mouse over this class */
 .menuIcon {
@@ -72,12 +76,12 @@
             {
             display: block;
             // number of links * 5 + 1
-            height: 4*5em+1em;
+            height: 5*5em+1em;
             overflow: auto;  
             transition: height ease-in-out 300ms;
             }
 .navList{
-    margin-top: 2em;
+    margin-top: 3em;
     }
 .navLinks{
     display: block;
