@@ -400,6 +400,124 @@ time{
     margin-bottom: 10px;
     background-image: linear-gradient(to bottom, $darkestBlack, $darkerBlack);
     }
+
+//
+//***********************************************IN DEVELOPMENT
+.devShowcaseWrap{
+    @extend %container;
+    grid-template-areas: "header header header header" "tile tile tile tile";
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    h1{
+        grid-area: header;
+        background-image: linear-gradient(to bottom, transparent 61%, $lightBlack 2px, transparent 64%);
+        span{
+            background-color: $darkerBlack;
+            padding-right: 5px;
+            }
+        }
+    }
+.devShowcase{
+    background-color: $darkerBlack;
+    padding: 20px 25px 0;
+    .devTile{
+        background-color: $mainBlack;
+        box-shadow: 0 2px 3px $darkestBlack;
+        color: white;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        margin-bottom: 30px;
+        position: relative;
+        }
+    .gameInfo{
+        padding: 15px;
+        }
+    }
+
+//
+//*****************************************************EYE4LABS
+.labsIntro{
+    background-color: $darkestBlack;
+    padding: 25px 50px 30px;
+    }
+.labsIntroWrap{
+    @extend %container;
+    grid-template-columns: 2fr 5fr;
+    grid-column-gap: 30px;
+    }
+.labsIntroText{
+    align-self: center;
+    background-color: $darkerBlack;
+    padding: 25px;
+    }
+.labButton{
+    background-color: white;
+    color: $darkerBlack;
+    display: inline-block;
+    margin-top: 15px;
+    text-shadow: none;
+    &:hover{
+        background-color: $labYellow;
+        color: white;
+        }
+    }
+.labsShowcase{
+    background-color: $darkerBlack;
+    padding: 25px 25px 0;
+    }
+.labsShowcaseYellow{
+    max-width: $mainWidth;
+    margin: 0 auto;
+    background-color: $labYellow;
+    padding: 25px;
+    }
+.labsShowcaseWrap{
+    @extend %container;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-areas: "header header" "tile tile";
+     grid-gap: 25px;
+     h1{
+        background-image: linear-gradient(to bottom, transparent 61%, white 2px, transparent 64%);
+        color: white;
+        grid-area: header;
+        margin-bottom: 0;
+        span{
+            background-color: $labYellow;
+            padding-right: 5px;
+            }
+        }
+    }
+.labTile{
+    background-color: lighten($labYellow,10%);
+    box-shadow: 0px 3px 5px rgba($mainBlack,.2);
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-column-gap: 15px;
+    padding: 15px;
+    &:last-child{
+        margin-bottom: 0;
+        }
+    }
+.labTile .gameImage img{
+    box-shadow: 0 2px 4px rgba($darkestBlack,.2);
+    margin-bottom: 10px;
+    }
+.tryButton{
+    background-color: $darkerBlack;
+    display: block;
+    &:hover{
+        background-color: $darkestBlack;
+        }
+    }
+.labTile .gameData{
+    color: $darkestBlack;
+    time{
+        color: white;
+        }
+    h4{
+        margin-top: 15px;
+        }
+    }
     
 //
 //*****************************************************FOOTER

@@ -1,3 +1,10 @@
+@media screen and (max-width:800px){
+    .devShowcaseWrap{
+        grid-template-areas: "header header header" "tile tile tile";
+        grid-template-columns: repeat(3,1fr);
+        }
+    }
+
 @media screen and (max-width:700px){
     .gameShowcaseWrapper{
         grid-template-areas: "header" "tile";
@@ -25,7 +32,15 @@
         }
     .aboutWrap{
         grid-template-columns: none;
-        }    
+        }
+    .devShowcaseWrap{
+        grid-template-areas: "header header" "tile tile";
+        grid-template-columns: repeat(2,1fr);
+        }
+    .labsShowcaseWrap{
+        grid-template-areas: "header" "tile";
+        grid-template-columns: 1fr;
+        }   
     
     }
     
