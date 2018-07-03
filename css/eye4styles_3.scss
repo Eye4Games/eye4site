@@ -222,6 +222,9 @@ time{
 .gameLink{
     position: relative;
     display: block;
+    img{
+        box-shadow: 0 2px 4px $darkerBlack;
+        }
     &::after{
         background-image: linear-gradient(to bottom, rgba($mainBlue,.1), rgba($mainBlue,.5));
         content: '';
@@ -235,7 +238,6 @@ time{
         opacity: 0;
         }
     }    
-
 .gameData{
     padding: 10px 10px 15px;
     }
@@ -344,7 +346,9 @@ time{
     &.midProgress::after{width: 50%;}
     &.muchProgress::after{width: 75%;}
     }
-
+.devProgress .gameThumb{
+    box-shadow: 0 2px 4px $darkerBlack;
+    }
 .statusBadge{
     background-color: $mainBlue;
     border-radius: 2px;
