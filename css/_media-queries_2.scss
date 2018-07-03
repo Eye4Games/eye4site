@@ -50,9 +50,27 @@
         }
     }
     
-@media screen and (max-width:400px){
-    .inDevelopmentWrap{
+@media screen and (max-width:430px){
+    .inDevelopmentWrap,
+    .devShowcaseWrap{
         grid-template-areas: "header" "tile";
         grid-template-columns: none;
+        }
+    .gameTile{
+        grid-template-areas: "image" "data" "cta";
+        grid-template-columns: none;
+        grid-template-rows: auto auto auto;
+        }
+    .gameImg{
+        padding: 0;
+        }
+    .gameData ul{
+        display: none;
+        }
+    }
+    
+@media screen and (max-width:320px){
+    .teamContainer{
+        grid-template-columns: 1fr;
         }
     }
