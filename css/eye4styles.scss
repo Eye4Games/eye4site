@@ -1,197 +1,235 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,600|Titillium+Web:300,300i,900');
+//
+//***************************************************UNIVERSAL
 @import 'reset';
 
-$mainBlack:#1e1e1e;
-$midBlack:lighten($mainBlack,50%);
-$lightBlack:lighten($mainBlack,30%);
-$mainBlue:#00a9d3;
-$hoverBlue:lighten($mainBlue,5%);
+// Palette
+$mainBlack:#313737;
+$lightBlack: #BCCAD0;
+$darkerBlack: #252529;
+$darkestBlack:#1A1A1A;
+$mainBlue:#29ABE2;
+$labYellow: #FFC60B;
 
 $aloftRibbon:#CCE0F4 0%,darken(#CCE0F4,40%) 100%;
 $riseRibbon:#BF1A24 0%,darken(#BF1A24,20%) 100%;
 $clairRibbon:#742C6C 0%,darken(#742C6C,12%) 100%;
 $alakaRibbon:#009345 0%,darken(#009345,15%) 100%;
 
-
-//
-//***************************************************UNIVERSAL
 *,*+*{
     box-sizing: border-box;
-    }
-body{
-    background: $mainBlack;
-    font-size: 62.5%;
-    font-family: 'Titillium Web', sans-serif;
-    text-rendering: optimizeLegibility;
     }
 img{
 	max-width: 100%;
 	height: auto;
 	}
-
-
+body{
+    color: white;
+    font-size: 62.5%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+    }
+    
 //
-//***************************************************TYPOGRAPHY
-h1, h2, h3, h4{
-    display: block;
-    text-transform: uppercase;
-    width: 100%;
+//*****************************************************LAYOUT
+$mainWidth: 1160px;
+
+%container{
+    display: grid;
+    margin: 0 auto;
+    max-width: $mainWidth;
     }
-h1, h2{
-    font-family: 'Oswald', sans-serif;
+    
+//
+//***************************************************ELEMENTS
+.button{
+    background-color: $lightBlack;
+    border-radius: .2em;
+    box-shadow: 0 2px 3px $darkestBlack;
+    color: white;
+    font-size: 1.6em;
+    font-weight: 700;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 2px $mainBlack;
+    &:hover{
+        background-color: darken($lightBlack,10%);
+        text-shadow: 0 1px 2px $mainBlack;
+        }
     }
+.button + .button{
+    margin-left: 10px;
+    }
+.buyButton{
+    background-color: $mainBlue;
+    &:hover{
+        background-color: darken($mainBlue,10%);
+        }
+    }
+    
+//
+//*************************************************TYPOGRAPHY
 h1{
+    color: rgba($lightBlack,.5);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
     font-size: 3.6em;
-    font-weight: 400;
-    line-height: 1;
-    //font: 400 normal 3.6em/1 'Oswald', sans-serif;
-    margin-bottom: 30px;
+    margin-bottom: .5em;
     }
 h2{
     font-size: 2.4em;
-    font-weight: 600;
-    line-height: 1;
-    //font: 600 normal 2.4em/1 'Oswald', sans-serif;
-    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: $lightBlack;
+    display: block;
+    margin-bottom: 15px;
     }
-p{
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 1.8em;
-    font-weight: 300;
-    line-height: 1.8em;
-    //font: 300 normal 1.8em/1.8em 'Titillium Web', sans-serif;
-    em{font-style: italic;}
-    a{
-        border-bottom: 2px dotted rgba($mainBlue,.2);
-        color: $mainBlue;
-        margin-bottom: -4px;
-        text-decoration: none;
-        &:hover{
-            color: $hoverBlue;
-            border-bottom-color: $midBlack;
+h3{
+    font-size: 2.4em;
+    font-weight: 700;
+    margin-bottom: .25em;
+    }
+h4{
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 1.2em;
+    padding-bottom: .5em;
+    }
+h5{
+    font-size: 1.4em;
+    }
+p,
+ul > li{
+    font-size: 1.6em;
+    line-height: 1.5em;
+    strong{
+        font-weight: 700;
+        }
+    em{
+        font-style: italic;
+        }
+    }
+p a{
+    border-bottom: 2px dotted rgba($mainBlue,.2);
+    color: $mainBlue;
+    text-decoration: none;
+    &:hover{
+        color: lighten($mainBlue,10%);
+        border-bottom: 2px dotted $mainBlue;
+        }
+    }
+p+p{
+    margin-top: 15px;
+    }
+time{
+    color: $lightBlack;
+    display: block;
+    font-size: 1.6em;
+    margin-bottom: .5em;
+    }
+
+//
+//*****************************************************HEADER
+.header{
+    padding: 0 25px;
+    background-color: $mainBlack;
+    }
+.headerWrap{
+    @extend %container;
+    }
+.mainHeader{
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px;
+    width: 100%;
+    }
+//**************************************Logo
+.logo{
+    display: flex;
+    max-height: 75px;
+    max-width: 239px;
+    margin-top: 13px;
+    }
+.logo svg{
+    .eye-symbol, .eye-word{
+        fill: white;
+        }
+    .games-word{
+        fill: $mainBlue;
+        }
+    }
+.logo:hover svg{
+    .eye-symbol{fill: $mainBlue;}
+    }
+//*********************************Navigation
+.mainNav{
+    display: flex;
+    }
+@import 'menu';
+
+.active{
+    a{color: $mainBlue;}
+    &.labs a{color: $labYellow;}
+    }
+    
+//
+//*******************************************************MAIN
+
+//************************************Games
+.gameShowcase{
+    background-color: $darkerBlack;
+    padding: 20px 25px 0;
+    }
+.gameShowcaseWrapper{
+    @extend %container;
+    grid-template-areas: "header header header" "tile tile tile";
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 30px;
+    h1{
+        grid-area: header;
+        background-image: linear-gradient(to bottom, transparent 61%, $lightBlack 2px, transparent 64%);
+        span{
+            background-color: $darkerBlack;
+            padding-right: 5px;
             }
         }
-    & + p{margin-top: 1em;}
-    }
-
-//
-//***************************************************LAYOUT 
-
-$mainWidth:1160px;
-
-%container{
-	display: flex;
-	margin: 0 auto;
-	max-width: $mainWidth;
-	flex-wrap: wrap;
-	}
-	   
-.halfWidth{
-    flex: 1 1 48%;
-    &:nth-child(odd){margin-right: 1%;}
-    &:nth-child(even){margin-left: 1%;}
-    }
-.thirdWidth{
-    flex: 0 1 31%;
-    &:nth-child(2n){
-        margin-left: 1.5%;
-        margin-right: 1.5%;
-        }
-    }
-.quarterWidth{
-    flex: 0 1 22%;
-    }
-
-.textContainer{
-    @extend %container;
-    display: block;
-    text-align: center;
-    }
-    
-    
-//
-//***************************************************HEADER	
-.logo{
-    margin-bottom: -30px; 
-    svg{
-        fill: $mainBlack;
-        background-color: white;
-        border-radius: 0 0 12% 12%;
-        }
-     svg:hover{
-        fill: $mainBlue;
-        transition: fill ease-in-out 300ms;
-        }  
-    }
-
-@import 'menu';
-.headerWrap{
-    background-image: url(../images/eye-pattern.png);
-    background-repeat: repeat;
-    box-shadow: inset 0 -.5em 1em rgba(black,.2);
-    }
-header{
-    @extend %container;
-    padding: 0 2%;
-    position: relative;
-    justify-content: space-between;
-    }
-
-//
-//*********************************************** GAME SOWCASE
-.gameShowcase{background-color: $mainBlack;}
-.gameShowcaseContainer{
-    @extend %container;
-    justify-content: space-around;
-    padding: 5em 2%;
     }
 .gameTile{
-    background-image: linear-gradient(45deg, rgba(white,.02),rgba(white,.1));
-    border-left: 10px solid transparent;
-    border-radius: 2px;
-    display: flex;
-    flex: 1 1 48%;
-    margin-bottom: 2.5em;
-    padding: 2.5em 2em;;
+    background-color: $mainBlack;
+    box-shadow: 0 2px 3px $darkestBlack;
+    color: white;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin-bottom: 30px;
     position: relative;
-    &:nth-child(odd){margin-right: 1%;}
-    &:nth-child(even){margin-left: 1%;}
-    &:nth-last-child(-n + 2){margin-bottom: 0;}
     &::before{
         background-color: transparent;
         content: '';
         position: absolute;
-        width: 10px;
-        top: 0; bottom: 0; left: -10px;
-        }
-    &.aloftGame{
-        &::before{background-image: linear-gradient(to bottom,$aloftRibbon);} 
+        height: 5px;
+        top: -5px; left: 0; right: 0;
         }
     &.riseGame{
-        &::before{background-image: linear-gradient(to bottom,$riseRibbon);} 
+        &::before{background-image: linear-gradient(to right,$riseRibbon);} 
         }
     &.clairGame{
-        &::before{background-image: linear-gradient(to bottom,$clairRibbon);} 
+        &::before{background-image: linear-gradient(to right,$clairRibbon);} 
         }
     &.alakaGame{
-        &::before{background-image: linear-gradient(to bottom,$alakaRibbon);} 
+        &::before{background-image: linear-gradient(to right,$alakaRibbon);} 
         }
     }
-.gameLink{
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-    align-self: flex-start;
-    border-radius: 2px;
-    cursor: pointer;
-    flex: 0 1 100%;
-    position: relative;
+.gameImg{
     line-height: 0;
+    }
+.gameLink{
+    position: relative;
+    display: block;
+    img{
+        box-shadow: 0 2px 4px $darkerBlack;
+        }
     &::after{
-        background: linear-gradient(to bottom, rgba($mainBlue,.1), rgba($mainBlue,.5));
-        border-radius: 2px;
+        background-image: linear-gradient(to bottom, rgba($mainBlue,.1), rgba($mainBlue,.5));
         content: '';
         cursor: pointer;
         mix-blend-mode: hard-light;
@@ -199,118 +237,102 @@ header{
         left: 0; top: 0; right: 0; bottom: 0;
         transition: 100ms opacity ease-in-out;
         }
-    &.disabled{&::after{background: linear-gradient(to bottom, rgba($mainBlack,.1), rgba($mainBlack,.5));}}
-    &:hover{
-        &::after{
-            transition: 100ms opacity ease-in-out;
-            opacity: 0;
+    &:hover::after{
+        opacity: 0;
+        }
+    }    
+.gameData{
+    padding: 10px 10px 15px;
+    }
+.ctaSection{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 0 10px 15px;
+    }
+    
+//*****************************Announcements
+.announcement{
+    background-color: $darkerBlack;
+    padding: 0 25px 25px;
+    }
+.announcementWrap{
+    @extend %container;
+    background-color: lighten($mainBlack,10%);
+    padding: 15px;
+    max-width: $mainWidth*.75;
+    }
+    
+//*********************************Newsletter
+.newsletter{
+    background-color: $darkerBlack;
+    padding: 20px 25px 25px;
+    text-align: center;
+    h1{
+        display: block;
+        width: 100%;
+        }
+    }
+.newsletterWrap{
+    @extend %container;
+    max-width: $mainWidth*.33;
+    }
+.subscribeButton{
+    background: $darkerBlack;
+    border: 2px solid $mainBlue;
+    color: $mainBlue;
+	box-shadow: 0 1px 2px rgba($mainBlack,.2);
+	padding: 10px 16px;
+	width: 100%;
+	&:hover{
+    	background-color: $mainBlue;
+    	color: $darkerBlack;
+    	text-shadow: none;
+	    }
+    }
+
+//*********************In Development Summary
+.inDevelopment{
+    background-color: $darkestBlack;
+    padding: 20px 25px 0;
+    }
+.inDevelopmentWrap{
+    @extend %container;
+    grid-template-areas: "header header header header" "tile tile tile tile";
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 30px;
+    h1{
+        grid-area: header;
+        background-image: linear-gradient(to bottom, transparent 61%, $lightBlack 2px, transparent 64%);
+        span{
+            background-color: $darkestBlack;
+            padding-right: 5px;
             }
         }
     }
-.gameThumb{
-    border-radius: 2px;
-    box-shadow: -.5em .5em .25em rgba(black,.1), 0 -1px 1px rgba(white,.3);
+.devTileMini, .devTileMore{
+    box-shadow: 0 2px 3px black;
+    margin-bottom: 30px;
     }
-    
-.gameInfo{
-    display: flex;
-    color: white;
-    font-size: 1.6em;
-    flex-wrap: wrap;
-    margin-left: 1.5em;
-    width: 100%;
-    time{
-        color: $lightBlack;
-        padding-bottom: .2em;
-        }
-    h3{
-        font-size: 1.25em;
-        text-transform: none;
-        }
-    time, h3{
-        display: block;
-        font-weight: 900;
-        letter-spacing: 1px;
-        }
-    }
-.gameData,
-.buttonGroup{
-    width: 100%;
-    }
-.gameData{
-    padding: .5em 0 .75em;
-    li{
-        align-items: flex-end;
-        display: flex;
-        margin-bottom: .25em;
-        }
-    svg{
-        fill: $lightBlack;
-        font-size: .75em;
-        margin-right: 5px;
-        height: 18px;
-        width: 18px;
-        }
-    }
-.buttonGroup{
-    display: flex;
-    align-self: flex-end;
-    }
-.button{
-    background-color: $midBlack;
-    border-bottom: 2px solid rgba(black,.2);
-    border-radius: 3px;
-    box-shadow: 0 2px 5px rgba(black,.2);
-    color: white;
-    padding: .75em .5em .5em;
-    flex: 0 1 100%;
-    font-size: .75em;
+.devTileMore{
+    display: grid;
     text-align: center;
-    text-decoration: none;
-    text-shadow: 0 1px 2px rgba(black,.1);
-    text-transform: uppercase;
-    width: 100%;
-    & + .button{margin-left: 10px;}
-    &.buyButton{
-        background-color: $mainBlue;
-        &:hover{background-color: $hoverBlue;}
-        }
-    &.disabled{color: lighten($midBlack,15%);}
-    &:hover{
-        background-color: lighten($midBlack,5%);
-        box-shadow: 0 .25em .35em rgba(black,.5);
-        text-shadow: 0 1px 2px rgba(black,.4);
-        }
-    }
-    
-//
-//*********************************************** IN DEVELOPMENT
-.devShowcaseContainer{
-    @extend %container;
-    justify-content: flex-start;
-    padding: 5em 2%;
-    h1{
+    position: relative;
+    a{
+        align-self: stretch;
+        background-color: $mainBlack;
         color: white;
-        text-align: center;
-        }
-    }
-
-.devTile{
-    align-content: flex-start;
-    display: flex;
-    flex: 0 0 23%;
-    flex-wrap: wrap;
-    margin: 0 1% 3em;
-    .gameInfo{
-        margin-left: 0;
-        margin-top: 1em;
-        }
-    p{
-        font-size: 1em;
-        }
-    h4{
-        font-weight: bold;
-        margin-top: .5em;
+        display: grid;
+        font-size: 2.4em;
+        flex-basis: 100%;
+        padding: 10px;
+        text-decoration: none;
+        &:hover{
+            background-color: $darkerBlack;
+            color: $mainBlue;
+            }
+        span{
+            align-self: center;
+            }
         }
     }
 .devProgress{
@@ -327,7 +349,9 @@ header{
     &.midProgress::after{width: 50%;}
     &.muchProgress::after{width: 75%;}
     }
-
+.devProgress .gameThumb{
+    box-shadow: 0 2px 4px $darkerBlack;
+    }
 .statusBadge{
     background-color: $mainBlue;
     border-radius: 2px;
@@ -339,151 +363,192 @@ header{
     bottom: 12px;
     right: 10px;
     }
-.devProgress{
-    position: relative;
-    &::before{
-        content: '';
-        background-image: linear-gradient(to bottom, rgba($mainBlack,.1), rgba($mainBlack,.5));;
-        position: absolute;
-        top: 0; bottom: 0; left: 0; right: 0;
-        }
-    }
-
-
     
-//
-//**********************************************ANNOUNCEMENTS
-.announcementSection{
-    background-color: lighten($lightBlack,45%);
-    border-top: 4px solid $mainBlue;
-    box-shadow: 0 3px 5px rgba(black,.1);
-    padding: 40px 10px;
-    position: relative;
-    text-align: center;
-    h1{
-        color: $mainBlue;
-        }
-    .textContainer{
-        max-width: 780px;
-        }
+//************************************About
+.about{
+    background-color: $darkerBlack;
+    padding: 20px 25px 20px;
     }
-    
-//
-//*************************************************NEWSLETTER
-.newsletterSection{
-	background: $midBlack;
-	padding: 5em 0;
-	h1{
-    	color: $lightBlack;
-	    }
-	}
-.formContainer{
-	display: block;
-	margin: 0 auto;
-	max-width: 780px;
-	padding: 0 3.5%;
-	text-align: center;
-	h2{color: $lightBlack;}
-	form{width: 100%;}
-	input{
-		border: none;
-		border-radius:5px;
-		padding: 15px 10px 10px;
-		}
-	}
-.inputContainer{
-    display: flex;
-    flex-basis: 100%;
-	margin-bottom: 20px;
-	justify-content: space-between;
-	input[type="text"], input[type="email"]{
-    	flex-basis: 100%;
-    	&.halfWidth{
-        	max-width: 48%;
-    		&:nth-child(even),&:nth-child(odd){margin-left: 0; margin-right: 0;}
-    		}
-		&[placeholder]{font: 300 normal 1.6em/1 'Titillium Web', sans-serif;}
-		&:focus{
-    		box-shadow: 0 0 6px rgba($mainBlack,.5);
-		    }
-		}
-	}
-.submitButton{
-    -webkit-appearance: none;
-	background: $mainBlue;
-	box-shadow: 0 1px 2px rgba($mainBlack,.2);
-	cursor: pointer;
-	font-size: 1.6em;
-	position: relative;
-	width: auto;
-	z-index: 2;
-	&:hover{
-    	background: $hoverBlue;
-	    }
-	}
-.submitContainer{
-	position: relative;
-	padding: 0 10px;
-	&::after{
-		position: relative;
-		border-top: 2px dotted $lightBlack;
-		content: "";
-		left: 0; right: 0;
-		display: block;
-		margin: -22px auto 0;
-		z-index: 0;
-		}
-	}
-	
-//
-//*************************************************ABOUT US
-.aboutSection{background-color: $lightBlack;}
-.aboutContainer{
+.aboutWrap{
     @extend %container;
-    color: white;
-    padding: 3em 2%;
-    justify-content: space-between;
-    h1, h2{color: $midBlack;}
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+     h1{
+        background-image: linear-gradient(to bottom, transparent 61%, $lightBlack 2px, transparent 64%);
+        span{
+            background-color: $darkerBlack;
+            padding-right: 5px;
+            }
+        }
+    }
+.aboutText{
+    margin-bottom: 25px;
     }
 .teamContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-top: 2em;
-    }
-.latestNews{
-    max-height: 725px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    justify-content: space-between;
     }
 .teamTile{
     text-align: center;
-    margin-bottom: 2em;
-    padding: 0 3%;
+    margin-bottom: 30px;
     h4{
         font-family: 'Oswald', sans-serif;
-        font-size: 1.4em;
         font-weight: 600;
-        line-height: 1.2em;
-        padding-bottom: .5em;
-        text-transform: none;
-        } 
+        }
     }
 .teamImage{
     border-radius: 50%;
-    box-shadow: -.25em .25em .125em rgba($mainBlack,.1);
-    margin-bottom: 1em;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to bottom, $darkestBlack, $darkerBlack);
+    }
+
+//
+//***********************************************IN DEVELOPMENT
+.devShowcaseWrap{
+    @extend %container;
+    grid-template-areas: "header header header header" "tile tile tile tile";
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    h1{
+        grid-area: header;
+        background-image: linear-gradient(to bottom, transparent 61%, $lightBlack 2px, transparent 64%);
+        span{
+            background-color: $darkerBlack;
+            padding-right: 5px;
+            }
+        }
+    }
+.devShowcase{
+    background-color: $darkerBlack;
+    padding: 20px 25px 0;
+    .devTile{
+        background-color: $mainBlack;
+        box-shadow: 0 2px 3px $darkestBlack;
+        color: white;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        margin-bottom: 30px;
+        position: relative;
+        }
+    .gameInfo{
+        padding: 15px;
+        }
+    }
+
+//
+//*****************************************************EYE4LABS
+.labsIntro{
+    background-color: $darkestBlack;
+    padding: 25px 50px 30px;
+    }
+.labsIntroWrap{
+    @extend %container;
+    grid-template-columns: 2fr 5fr;
+    grid-column-gap: 30px;
+    }
+.labsIntroText{
+    align-self: center;
+    background-color: $darkerBlack;
+    padding: 25px;
+    }
+.labButton{
+    background-color: white;
+    color: $darkerBlack;
+    display: inline-block;
+    margin-top: 15px;
+    text-shadow: none;
+    &:hover{
+        background-color: $labYellow;
+        color: white;
+        }
+    }
+.labsShowcase{
+    background-color: $darkerBlack;
+    padding: 25px 25px 0;
+    p a{
+        color: white;
+        border-bottom-color: $mainBlack;
+        &:hover{
+            color: $mainBlack;
+            }
+        }
+    }
+.labsShowcaseYellow{
+    max-width: $mainWidth;
+    margin: 0 auto;
+    background-color: $labYellow;
+    padding: 25px;
+    &.preview{
+        background-image: linear-gradient(to bottom, rgba($labYellow,.5), rgba($labYellow,0)), url(../images/eye4labs-art.png);
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-height: 50em;
+        }
+    }
+.labsShowcaseWrap{
+    @extend %container;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-areas: "header header" "tile tile";
+     grid-gap: 25px;
+     h1{
+        background-image: linear-gradient(to bottom, transparent 61%, white 2px, transparent 64%);
+        color: white;
+        grid-area: header;
+        margin-bottom: 0;
+        span{
+            background-color: $labYellow;
+            padding-right: 5px;
+            }
+        }
+    }
+.labTile{
+    background-color: lighten($labYellow,10%);
+    box-shadow: 0px 3px 5px rgba($mainBlack,.2);
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-column-gap: 15px;
+    padding: 15px;
+    &:last-child{
+        margin-bottom: 0;
+        }
+    }
+.labTile .gameImage img{
+    box-shadow: 0 2px 4px rgba($darkestBlack,.2);
+    margin-bottom: 10px;
+    }
+.tryButton{
+    background-color: $darkerBlack;
+    display: block;
+    &:hover{
+        background-color: $darkestBlack;
+        }
+    }
+.labTile .gameData{
+    color: $darkestBlack;
+    time{
+        color: white;
+        }
+    h4{
+        margin-top: 15px;
+        }
     }
     
-    
 //
-//*************************************************FOOTER
+//*****************************************************FOOTER
 .mainFooter{
     background-color: $mainBlack;
-    color: $midBlack;
+    color: white;
     padding: 2em 2%;
     text-align: center;
     }
  .socialLinks{
-    @extend %container;
+     display: flex;
+    max-width: $mainWidth;
+    margin: 0 auto;
     justify-content: center;
     }    
 .socialLinks a{
@@ -494,7 +559,10 @@ header{
         width: 40px;
         padding: 10px;
         &.mail{padding: 12px;}
-        &:hover{background: lighten($mainBlue, 15%);}
+        &:hover{
+            background: darken($mainBlue, 10%);
+            box-shadow: 0  2px 4px $darkestBlack;
+            }
         &:first-child{margin-left: 0;}
         &:last-child{margin-right: 0;}
         svg{fill:$mainBlack}
@@ -503,5 +571,6 @@ header{
     font-size: 1.4em;
     margin-top: 1em;
     }
+
     
-@import 'media-queries';
+@import '_media-queries'
