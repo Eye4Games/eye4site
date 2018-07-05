@@ -1,80 +1,89 @@
-@media screen and (max-width: 49em){    
-    //GAME SHOWCASE
-    .gameTile{
-        flex-basis: 100%;
-        &:nth-child(odd){margin-right: 0;}
-        &:nth-child(even){margin-left: 0;}
-        &:nth-last-child(-n + 2){margin-bottom: 2.5em;}
-        &:last-child{margin-bottom: 0;}
+@media screen and (max-width:800px){
+    .devShowcaseWrap{
+        grid-template-areas: "header header header" "tile tile tile";
+        grid-template-columns: repeat(3,1fr);
         }
-}
-    
-@media screen and (max-width: 35em){
-    
-    //LAYOUT
-    .aboutSection{
-        .halfWidth{
-            flex-wrap: wrap;
-            flex-basis: 100%;
-            &:nth-child(odd){margin-right: auto;}
-            &:nth-child(even){margin-left: auto;}
-            }
-        .teamContainer{
-            margin-bottom: 2em;
-            text-align: center;
-            justify-content: center;
-            }
-        }
-    .devTile{
-        flex: 0 0 48%;
-        }       
+    }
 
-}
-
-@media screen and (max-width:27.813em){
-    
-    //GAME SHOWCASE
-    .gameShowcase{
-        margin-left: 2%;
-        margin-right: 2%;
+@media screen and (max-width:700px){
+    .gameShowcaseWrapper{
+        grid-template-areas: "header" "tile";
+        grid-template-columns: none;
         }
     .gameTile{
-        border-left: none;
-        border-top: 10px solid transparent;
-        flex-wrap: wrap;
-        &::before{
-            height: 10px;
-            width: auto;
-            top: -10px; bottom: auto; left: 0; right: 0;
-            }
-         &.aloftGame::before{background-image: linear-gradient(45deg,$aloftRibbon);} 
-         &.riseGame::before{background-image: linear-gradient(45deg,$riseRibbon);} 
-         &.clairGame::before{background-image: linear-gradient(45deg,$clairRibbon);} 
-         &.alakaGame::before{background-image: linear-gradient(45deg,$alakaRibbon);} 
+        grid-template-areas: "image data" "image cta";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 42px;
         }
-    .gameLink, .gameInfo{
-        flex: 0 0 100%;
+    .gameImg{
+        grid-area: image;
+        padding: 15px;
         }
-    .gameInfo{
-        margin-left: 0;
-        margin-top: 1em;
+    .gameData{
+        grid-area: data;
         }
-    .gameTitle, .gameData{
+    .ctaSection{
+        grid-area: cta;
+        }
+    .inDevelopmentWrap{
+        grid-template-areas: "header header" "tile tile";
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 30px;
+        }
+    .aboutWrap{
+        grid-template-columns: none;
+        }
+    .devShowcaseWrap{
+        grid-template-areas: "header header" "tile tile";
+        grid-template-columns: repeat(2,1fr);
+        }
+    .labsShowcaseWrap{
+        grid-template-areas: "header" "tile";
+        grid-template-columns: 1fr;
+        }   
+    
+    }
+@media screen and (max-width:650px){
+    .labsIntro{
+        padding: 25px;
+        }
+    .labsIntroWrap{
+        grid-template-columns: 3fr 4fr;
+        }
+    }
+    
+@media screen and (max-width:500px){
+    .teamContainer{
+        grid-template-columns: repeat(2, 1fr);
+        }
+    .labsIntroWrap{
+        grid-template-columns: auto;
+        grid-auto-rows: auto;
+        grid-row-gap: 30px;
+        }
+    }
+    
+@media screen and (max-width:430px){
+    .inDevelopmentWrap,
+    .devShowcaseWrap{
+        grid-template-areas: "header" "tile";
+        grid-template-columns: none;
+        }
+    .gameTile{
+        grid-template-areas: "image" "data" "cta";
+        grid-template-columns: none;
+        grid-template-rows: auto auto auto;
+        }
+    .gameImg{
+        padding: 0;
+        }
+    .gameData ul{
         display: none;
         }
-        
-    //ABOUT       
-    .aboutSection{
-        padding-left: 4%;
-        padding-right: 4%;
-        //text-align: center;
-        .thirdWidth{
-            flex-basis: 48%;
-            }
-        }
-    //IN DEVELOPMENT
-    .devTile{
-        flex: 0 0  100%;
-        margin: 0  0  3em;
+    }
+    
+@media screen and (max-width:320px){
+    .teamContainer{
+        grid-template-columns: 1fr;
         }
     }
