@@ -40,6 +40,10 @@
     .labsShowcaseWrap{
         grid-template-areas: "header" "tile";
         grid-template-columns: 1fr;
+        }
+    .labTile{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "image data" "image data";
         }   
     
     }
@@ -60,6 +64,10 @@
         grid-template-columns: auto;
         grid-auto-rows: auto;
         grid-row-gap: 30px;
+        }
+    .labTile{
+        grid-template-columns: none;
+        grid-template-areas: "image" "data";
         }
     }
     

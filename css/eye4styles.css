@@ -611,7 +611,10 @@ time {
     grid-template-columns: repeat(2, 1fr); }
   .labsShowcaseWrap {
     grid-template-areas: "header" "tile";
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .labTile {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image data" "image data"; } }
 
 @media screen and (max-width: 650px) {
   .labsIntro {
@@ -625,7 +628,10 @@ time {
   .labsIntroWrap {
     grid-template-columns: auto;
     grid-auto-rows: auto;
-    grid-row-gap: 30px; } }
+    grid-row-gap: 30px; }
+  .labTile {
+    grid-template-columns: none;
+    grid-template-areas: "image" "data"; } }
 
 @media screen and (max-width: 430px) {
   .inDevelopmentWrap,
