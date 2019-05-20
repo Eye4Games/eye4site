@@ -576,6 +576,9 @@ time {
   .socialLinks a svg {
     fill: #313737; }
 
+.mediaResources {
+  margin: 15px 0 0; }
+
 .copyright {
   font-size: 1.4em;
   margin-top: 1em; }
