@@ -30,6 +30,10 @@
         grid-template-columns: repeat(2,1fr);
         grid-column-gap: 30px;
         }
+    .inTheLabWrap{
+        grid-template-areas: "header header" "text text" "tile tile";
+        grid-template-columns: repeat(2,1fr);
+        }
     .aboutWrap{
         grid-template-columns: none;
         }
@@ -75,6 +79,10 @@
     .inDevelopmentWrap,
     .devShowcaseWrap{
         grid-template-areas: "header" "tile";
+        grid-template-columns: none;
+        }
+    .inTheLabWrap{
+        grid-template-areas: "header" "text" "tile";
         grid-template-columns: none;
         }
     .gameTile{

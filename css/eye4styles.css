@@ -48,7 +48,7 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   text-rendering: optimizeLegibility; }
 
-.headerWrap, .gameShowcaseWrapper, .announcementWrap, .newsletterWrap, .inDevelopmentWrap, .aboutWrap, .devShowcaseWrap, .labsIntroWrap, .labsShowcaseWrap {
+.headerWrap, .gameShowcaseWrapper, .announcementWrap, .newsletterWrap, .inDevelopmentWrap, .inTheLabWrap, .aboutWrap, .devShowcaseWrap, .labsIntroWrap, .labsShowcaseWrap {
   display: grid;
   margin: 0 auto;
   max-width: 1160px; }
@@ -331,7 +331,7 @@ time {
     color: #252529;
     text-shadow: none; }
 
-.inDevelopment {
+.inDevelopment, .inTheLab {
   background-color: #1A1A1A;
   padding: 20px 25px 0; }
 
@@ -346,8 +346,10 @@ time {
       background-color: #1A1A1A;
       padding-right: 5px; }
 
+.devTileMini img, .devTileMore {
+  box-shadow: 0 2px 3px black; }
+
 .devTileMini, .devTileMore {
-  box-shadow: 0 2px 3px black;
   margin-bottom: 30px; }
 
 .devTileMore {
@@ -386,6 +388,8 @@ time {
     width: 50%; }
   .devProgress.muchProgress::after {
     width: 75%; }
+  .devProgress.maxProgress {
+    border-color: #29ABE2; }
 
 .devProgress .gameThumb {
   box-shadow: 0 2px 4px #252529; }
@@ -400,6 +404,30 @@ time {
   text-decoration: none;
   bottom: 12px;
   right: 10px; }
+
+.inTheLab .devProgress::after {
+  border-color: #FFC60B; }
+
+.inTheLab .devProgress.maxProgress {
+  border-color: #FFC60B; }
+
+.inTheLab .statusBadge {
+  background-color: #FFC60B;
+  color: #313737; }
+
+.inTheLabWrap {
+  grid-template-areas: "header header header header" "text text tile tile";
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px; }
+  .inTheLabWrap h1 {
+    grid-area: header;
+    background-image: linear-gradient(to bottom, transparent 61%, #BCCAD0 2px, transparent 64%); }
+    .inTheLabWrap h1 span {
+      background-color: #1A1A1A;
+      padding-right: 5px; }
+  .inTheLabWrap .textSummary {
+    grid-area: text;
+    margin-bottom: 30px; }
 
 .about {
   background-color: #252529;
@@ -607,6 +635,9 @@ time {
     grid-template-areas: "header header" "tile tile";
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 30px; }
+  .inTheLabWrap {
+    grid-template-areas: "header header" "text text" "tile tile";
+    grid-template-columns: repeat(2, 1fr); }
   .aboutWrap {
     grid-template-columns: none; }
   .devShowcaseWrap {
@@ -640,6 +671,9 @@ time {
   .inDevelopmentWrap,
   .devShowcaseWrap {
     grid-template-areas: "header" "tile";
+    grid-template-columns: none; }
+  .inTheLabWrap {
+    grid-template-areas: "header" "text" "tile";
     grid-template-columns: none; }
   .gameTile {
     grid-template-areas: "image" "data" "cta";

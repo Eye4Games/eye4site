@@ -291,7 +291,7 @@ time{
     }
 
 //*********************In Development Summary
-.inDevelopment{
+.inDevelopment, .inTheLab{
     background-color: $darkestBlack;
     padding: 20px 25px 0;
     }
@@ -309,8 +309,10 @@ time{
             }
         }
     }
-.devTileMini, .devTileMore{
+.devTileMini img, .devTileMore{
     box-shadow: 0 2px 3px black;
+    }    
+.devTileMini, .devTileMore{
     margin-bottom: 30px;
     }
 .devTileMore{
@@ -348,6 +350,7 @@ time{
     &.minorProgress::after{width: 25%;}
     &.midProgress::after{width: 50%;}
     &.muchProgress::after{width: 75%;}
+    &.maxProgress{border-color: $mainBlue}
     }
 .devProgress .gameThumb{
     box-shadow: 0 2px 4px $darkerBlack;
@@ -362,6 +365,36 @@ time{
     text-decoration: none;
     bottom: 12px;
     right: 10px;
+    }
+.inTheLab{
+    .devProgress{
+        &::after{border-color: $labYellow}
+        &.maxProgress{border-color: $labYellow}
+        }
+    .statusBadge{
+        background-color: $labYellow;
+        color: $mainBlack;
+        }
+    }
+
+//*********************In Labs Summary
+.inTheLabWrap{
+    @extend %container;
+    grid-template-areas: "header header header header" "text text tile tile";
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 30px;
+    h1{
+        grid-area: header;
+        background-image: linear-gradient(to bottom, transparent 61%, $lightBlack 2px, transparent 64%);
+        span{
+            background-color: $darkestBlack;
+            padding-right: 5px;
+            }
+        }
+    .textSummary{
+        grid-area: text;
+        margin-bottom: 30px;
+        }
     }
     
 //************************************About
