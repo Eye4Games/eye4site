@@ -470,6 +470,134 @@ time{
         padding: 15px;
         }
     }
+//
+//*******************************************************RULES
+.textShowcaseWrap{
+    @extend %container;
+    }
+.textShowcase{
+    background-color: white;
+    color: $darkerBlack;
+    padding: 20px 25px 50px;
+    h1, h2, h3, h4{color: $mainBlack;}
+    h2{
+        font-size: 3em;
+        margin: 30px 0 15px;
+        & + h3{margin-top: 0;}
+        }
+    h3{margin: 30px 0 10px;}
+    h4{margin: 15px 0 0;}
+    blockquote{
+        font-style: italic;
+        }
+    p{
+        font-size: 1.6em;
+    }
+    ol, ul{
+        padding-left: 20px;
+        }
+    ul{
+        list-style-type: disc;
+        ul li{list-style-type: circle;}
+        ul ul li{list-style-type: "- ";}
+        }
+    ol{
+        list-style-type: decimal;
+        }
+    li{
+        font-size: 1.6em;
+        li{font-size: 1em;}
+        &+li{margin-top: 5px;}
+        p{font-size: 1em;}
+        }
+    table{
+        margin: 10px 0;
+        min-width: 300px;
+        th,td{padding: 8px;}
+        th{
+            font-weight: bold;
+            border-bottom: 2px solid $mainBlack;
+            }
+        td{border-top: 1px solid $mainBlack;}
+        }
+    }
+
+    //
+//******************************************************VIDEOS
+.videoShowcaseWrap{
+    @extend %container;
+    grid-template-areas: "header header header" "sidebar . video";
+    grid-template-columns: 2fr 1fr 6fr;
+    grid-column-gap: 30px;
+    h1{
+        grid-area: header;
+        background-image: linear-gradient(to bottom, transparent 61%, $lightBlack 2px, transparent 64%);
+        span{
+            background-color: $darkerBlack;
+            padding-right: 5px;
+            }
+        }
+    }
+.videoShowcase{
+    background-color: $darkerBlack;
+    padding: 20px 25px 0;
+    .videoTileWrap{
+        display: grid;
+        grid-area: video;
+        grid-template-areas: "video video";
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        }
+    .videoTile{
+        background-color: $mainBlack;
+        box-shadow: 0 2px 3px $darkestBlack;
+        color: white;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        margin-bottom: 30px;
+        position: relative;
+        }
+    .videoInfo{
+        padding: 15px;
+        }
+    .watchCTA{
+        padding: 0 15px 15px;
+        }
+    .videoCTA::after{
+        content:"▶";
+        padding-left: 5px;
+        font-size: .75em;;
+        }
+    }
+.videoSidebar{
+    grid-area: sidebar;
+    #sort-by, #filter-by{
+        border: 1px solid $lightBlack;
+        border-radius: 4px;
+        background-color: transparent;
+        box-shadow: 0 3px 5px black;
+        margin: 15px 0 25px;
+        padding: 15px;
+        }
+    #sort-by{
+        appearance: none;
+        color: white;
+        font-size: 1.6em;;
+        width: 100%;
+        }
+    }
+#filter-by{
+    list-style-type: none;
+    label{
+        display: block;
+        position: relative;
+        padding-left: 25px;
+        }
+    input[type="checkbox"]{
+        position: absolute;
+        margin-left: -25px;
+        }
+    }
 
 //
 //*****************************************************EYE4LABS
