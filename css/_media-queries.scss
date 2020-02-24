@@ -49,7 +49,10 @@
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "image data" "image data";
         }   
-    
+    .videoShowcaseWrap{
+        grid-template-areas: "header header" "video video";
+        grid-template-columns: repeat(2,1fr);
+        }
     }
 @media screen and (max-width:650px){
     .labsIntro{
@@ -84,6 +87,10 @@
     .inTheLabWrap{
         grid-template-areas: "header" "text" "tile";
         grid-template-columns: none;
+        }
+    .videoShowcaseWrap{
+        grid-template-areas: "header" "video";
+        grid-template-columns: 1fr;
         }
     .gameTile{
         grid-template-areas: "image" "data" "cta";

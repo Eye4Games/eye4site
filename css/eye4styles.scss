@@ -526,8 +526,10 @@ time{
 //******************************************************VIDEOS
 .videoShowcaseWrap{
     @extend %container;
-    grid-template-areas: "header header header" "sidebar . video";
-    grid-template-columns: 2fr 1fr 6fr;
+    //grid-template-areas: "header header header" "sidebar . video";
+    //grid-template-columns: 2fr 1fr 6fr;
+    grid-template-areas: "header header header" "video video video";
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;
     h1{
         grid-area: header;

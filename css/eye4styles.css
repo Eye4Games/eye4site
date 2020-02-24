@@ -808,9 +808,9 @@ time {
 }
 
 .videoShowcaseWrap {
-      grid-template-areas: "header header header" "sidebar . video";
-  -ms-grid-columns: 2fr 1fr 6fr;
-      grid-template-columns: 2fr 1fr 6fr;
+      grid-template-areas: "header header header" "video video video";
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
 }
 
@@ -873,8 +873,6 @@ time {
 }
 
 .videoSidebar {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: sidebar;
 }
 
@@ -1166,6 +1164,11 @@ time {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "image data" "image data";
   }
+  .videoShowcaseWrap {
+        grid-template-areas: "header header" "video video";
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -1207,6 +1210,11 @@ time {
         grid-template-areas: "header" "text" "tile";
     -ms-grid-columns: none;
         grid-template-columns: none;
+  }
+  .videoShowcaseWrap {
+        grid-template-areas: "header" "video";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   .gameTile {
         grid-template-areas: "image" "data" "cta";
