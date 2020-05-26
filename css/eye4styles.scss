@@ -191,6 +191,7 @@ time{
         }
     }
 .gameTile{
+    align-items: stretch;
     background-color: $mainBlack;
     border-radius: 3px;
     box-shadow: 0 2px 3px $darkestBlack;
@@ -199,19 +200,14 @@ time{
     grid-template-rows: auto 1fr auto;
     margin-bottom: 30px;
     position: relative;
-    &::before{
-        background-color: transparent;
-        content: '';
-        position: absolute;
-        height: 5px;
-        top: -5px; left: 0; right: 0;
-        }
     &.riseGame{background-color: #BF1A24;} 
     &.clairGame{background-color: #742C6C;}
     &.alakaGame{background-color: #009345;}
     }
 .gameImg{
+    display: flex;
     line-height: 0;
+    max-height: 300px;
     padding: 20px;
     text-align: center;
     }
@@ -222,7 +218,7 @@ time{
     img{
         border-radius: 5px;
         box-shadow: 5px 10px 10px rgba(black,.15);
-        max-height: 300px;
+        max-height: 100%;
         }
     &:hover img{
         box-shadow: 5px 10px 10px rgba(black,.35);
