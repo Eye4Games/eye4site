@@ -731,8 +731,7 @@ time {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 42px; }
   .gameImg {
-    grid-area: image;
-    padding: 15px; }
+    grid-area: image; }
   .gameData {
     grid-area: data; }
   .ctaSection {
@@ -791,8 +790,6 @@ time {
     grid-template-areas: "image" "data" "cta";
     grid-template-columns: none;
     grid-template-rows: auto auto auto; }
-  .gameImg {
-    padding: 0; }
   .gameData ul {
     display: none; } }
 

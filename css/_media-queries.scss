@@ -17,7 +17,6 @@
         }
     .gameImg{
         grid-area: image;
-        padding: 15px;
         }
     .gameData{
         grid-area: data;
@@ -96,9 +95,6 @@
         grid-template-areas: "image" "data" "cta";
         grid-template-columns: none;
         grid-template-rows: auto auto auto;
-        }
-    .gameImg{
-        padding: 0;
         }
     .gameData ul{
         display: none;
