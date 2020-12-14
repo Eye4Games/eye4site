@@ -4,6 +4,7 @@
 
 // Palette
 $mainBlack:#313737;
+$midBlack: lighten($mainBlack,10%);
 $lightBlack: #BCCAD0;
 $darkerBlack: #252529;
 $darkestBlack:#1A1A1A;
@@ -27,6 +28,17 @@ body{
     font-size: 62.5%;
     font-family: 'IBM Plex Sans', sans-serif;
     text-rendering: optimizeLegibility;
+    }
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
     }
     
 //
@@ -56,6 +68,9 @@ $mainWidth: 1160px;
     }
 .button + .button{
     margin-left: 10px;
+    }
+p .button{
+    font-size: 1em;
     }
 .buyButton{
     background-color: white;
@@ -122,6 +137,13 @@ time{
     display: block;
     font-size: 1.6em;
     margin-bottom: .5em;
+    }
+.textOnly p{
+    font-size: 1.8em;
+    line-height: 1.7em;
+    & + p{
+        margin-bottom: 30px;
+        }
     }
 
 //
@@ -584,6 +606,101 @@ time{
         margin-left: -25px;
         }
     }
+
+//
+//*********************************************************BOX
+.boxShowcase{
+    background-color: $darkerBlack;
+    padding: 25px 50px 30px;
+    }
+.boxExtras{
+    background-color: $darkestBlack;
+    padding: 25px 50px 30px;
+    }
+.breadcrumbWrap{
+    @extend %container;
+    }
+.breadcrumbs li{
+    color: $lightBlack;
+    display: inline;
+    a{
+        color: $mainBlue;
+        text-decoration: none;
+        }
+    & + li::before{
+        color: $midBlack;
+        content:'>';
+        padding: 0 5px;
+        }
+    }
+.boxShowcaseWrap, .boxExtrasWrap{
+    @extend %container;
+    grid-template-columns: 4fr 1fr 4fr;
+    grid-column-gap: 30px;
+    grid-template-areas: 'main . aside';
+    & main{grid-area: main;}
+    & aside{grid-area: aside;}
+    }
+.boxName{
+    width: 100%;
+    height: auto;
+    fill: white;
+    margin: 30px 0 25px;
+    //&.rise{fill:red;}
+    &.alaka{fill:green;}
+    &.clair{fill:purple;}
+    }
+.boxShowcase{
+    .gameDetails{
+        margin-bottom: 10px;
+        li{
+            display: inline;
+            & + li{margin-left: 15px;}
+            }
+        &::after{
+            content: '';
+            display: block;
+            border-bottom: 3px solid $midBlack;
+            margin: 15px 0 25px;
+            height:3px;
+            width: 100px;
+            }
+        }
+    }
+.boxDetails{
+    position: sticky;
+    text-align: center;
+    top: 20px;
+    }
+.boxImg, .extraImg{
+    align-content: center;
+    }
+.boxImg{
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+    img{
+        border-radius: 5px;
+        box-shadow: 15px 15px 10px $darkestBlack;
+        max-height: 400px;
+        }
+    }
+.boxPrice{
+    align-items: center;
+    border-top: 1px solid $midBlack;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 30px;
+    p{
+        text-align: left;
+        }
+    .buyButton{
+        border-radius: 3px;
+        font-size: 2.4em;
+        padding: 10px 8px;
+        }
+    }
+
 
 //
 //*****************************************************EYE4LABS

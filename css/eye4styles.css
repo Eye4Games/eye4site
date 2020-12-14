@@ -49,7 +49,18 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   text-rendering: optimizeLegibility; }
 
-.headerWrap, .gameShowcaseWrapper, .announcementWrap, .newsletterWrap, .inDevelopmentWrap, .inTheLabWrap, .aboutWrap, .devShowcaseWrap, .textShowcaseWrap, .videoShowcaseWrap, .labsIntroWrap, .labsShowcaseWrap {
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0; }
+
+.headerWrap, .gameShowcaseWrapper, .announcementWrap, .newsletterWrap, .inDevelopmentWrap, .inTheLabWrap, .aboutWrap, .devShowcaseWrap, .textShowcaseWrap, .videoShowcaseWrap, .breadcrumbWrap, .boxShowcaseWrap, .boxExtrasWrap, .labsIntroWrap, .labsShowcaseWrap {
   display: grid;
   margin: 0 auto;
   max-width: 1160px; }
@@ -68,6 +79,9 @@ body {
 
 .button + .button {
   margin-left: 10px; }
+
+p .button {
+  font-size: 1em; }
 
 .buyButton {
   background-color: white;
@@ -130,6 +144,12 @@ time {
   display: block;
   font-size: 1.6em;
   margin-bottom: .5em; }
+
+.textOnly p {
+  font-size: 1.8em;
+  line-height: 1.7em; }
+  .textOnly p + p {
+    margin-bottom: 30px; }
 
 .header {
   padding: 0 25px;
@@ -215,7 +235,7 @@ time {
   /* display submenu on click */
   .menuIcon + input[type=checkbox]:checked + ol {
     display: block;
-    height: 26em;
+    height: 31em;
     overflow: auto;
     transition: height ease-in-out 300ms; }
   .navList {
@@ -587,6 +607,88 @@ time {
   #filter-by input[type="checkbox"] {
     position: absolute;
     margin-left: -25px; }
+
+.boxShowcase {
+  background-color: #252529;
+  padding: 25px 50px 30px; }
+
+.boxExtras {
+  background-color: #1A1A1A;
+  padding: 25px 50px 30px; }
+
+.breadcrumbs li {
+  color: #BCCAD0;
+  display: inline; }
+  .breadcrumbs li a {
+    color: #29ABE2;
+    text-decoration: none; }
+  .breadcrumbs li + li::before {
+    color: #495252;
+    content: '>';
+    padding: 0 5px; }
+
+.boxShowcaseWrap, .boxExtrasWrap {
+  grid-template-columns: 4fr 1fr 4fr;
+  grid-column-gap: 30px;
+  grid-template-areas: 'main . aside'; }
+  .boxShowcaseWrap main, .boxExtrasWrap main {
+    grid-area: main; }
+  .boxShowcaseWrap aside, .boxExtrasWrap aside {
+    grid-area: aside; }
+
+.boxName {
+  width: 100%;
+  height: auto;
+  fill: white;
+  margin: 30px 0 25px; }
+  .boxName.alaka {
+    fill: green; }
+  .boxName.clair {
+    fill: purple; }
+
+.boxShowcase .gameDetails {
+  margin-bottom: 10px; }
+  .boxShowcase .gameDetails li {
+    display: inline; }
+    .boxShowcase .gameDetails li + li {
+      margin-left: 15px; }
+  .boxShowcase .gameDetails::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid #495252;
+    margin: 15px 0 25px;
+    height: 3px;
+    width: 100px; }
+
+.boxDetails {
+  position: sticky;
+  text-align: center;
+  top: 20px; }
+
+.boxImg, .extraImg {
+  align-content: center; }
+
+.boxImg {
+  padding-bottom: 30px;
+  margin-bottom: 15px; }
+  .boxImg img {
+    border-radius: 5px;
+    box-shadow: 15px 15px 10px #1A1A1A;
+    max-height: 400px; }
+
+.boxPrice {
+  align-items: center;
+  border-top: 1px solid #495252;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 30px; }
+  .boxPrice p {
+    text-align: left; }
+  .boxPrice .buyButton {
+    border-radius: 3px;
+    font-size: 2.4em;
+    padding: 10px 8px; }
 
 .labsIntro {
   background-color: #1A1A1A;
