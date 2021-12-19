@@ -622,9 +622,8 @@ time {
 }
 
 .inTheLabWrap .textSummary {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: text;
   margin-bottom: 30px;
 }
@@ -922,11 +921,6 @@ time {
   padding: 25px 50px 30px;
 }
 
-.boxExtras {
-  background-color: #1A1A1A;
-  padding: 25px 50px 30px;
-}
-
 .breadcrumbs li {
   color: #BCCAD0;
   display: inline;
@@ -943,20 +937,20 @@ time {
   padding: 0 5px;
 }
 
-.boxShowcaseWrap, .boxExtrasWrap {
+.boxShowcaseWrap {
   -ms-grid-columns: 4fr 1fr 4fr;
       grid-template-columns: 4fr 1fr 4fr;
   grid-column-gap: 30px;
       grid-template-areas: 'main . aside';
 }
 
-.boxShowcaseWrap main, .boxExtrasWrap main {
+.boxShowcaseWrap main {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: main;
 }
 
-.boxShowcaseWrap aside, .boxExtrasWrap aside {
+.boxShowcaseWrap aside {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: aside;
@@ -981,6 +975,14 @@ time {
   fill: #742C6C;
 }
 
+.boxName.bluff .mainColor {
+  fill: #BCCAD0;
+}
+
+.boxName.bluff .dropShadow {
+  fill: rgba(188, 202, 208, 0.15);
+}
+
 .boxShowcase .gameDetails {
   margin-bottom: 10px;
 }
@@ -1000,6 +1002,10 @@ time {
   margin: 15px 0 25px;
   height: 3px;
   width: 100px;
+}
+
+.boxShowcase.bluffGame {
+  background-color: #2a2147;
 }
 
 .boxDetails {
@@ -1045,8 +1051,81 @@ time {
 
 .boxPrice .buyButton {
   border-radius: 3px;
-  font-size: 2.4em;
+  font-size: 2em;
   padding: 10px 8px;
+  text-decoration: none;
+}
+
+.boxPrice .buyButton:hover {
+  background-color: #29ABE2;
+  -webkit-box-shadow: 0 3px 5px #1A1A1A;
+          box-shadow: 0 3px 5px #1A1A1A;
+}
+
+.boxExtras {
+  background-color: #1A1A1A;
+  padding: 25px 50px 30px;
+}
+
+.boxExtrasWrap {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "header header" "tile tile";
+  grid-gap: 25px;
+}
+
+.boxExtrasWrap h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+  margin-bottom: 0;
+}
+
+.boxTile {
+  display: -ms-grid;
+  display: grid;
+  background-color: #272727;
+      grid-template-areas: 'image text' '. cta';
+  -ms-grid-columns: 3fr 4fr;
+      grid-template-columns: 3fr 4fr;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  gap: 25px;
+  padding: 25px;
+}
+
+.boxTile:last-child {
+  margin-bottom: 0;
+}
+
+.boxTile > {
+  display: -ms-grid;
+  display: grid;
+}
+
+.boxTile img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: image;
+}
+
+.boxTile .content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: text;
+}
+
+.boxTile .cta {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: cta;
+  width: 100%;
+}
+
+.boxTile .cta:hover {
+  background-color: white;
+  color: #252529;
 }
 
 .labsIntro {
@@ -1141,7 +1220,8 @@ time {
   display: grid;
   -ms-grid-columns: 3fr 4fr;
       grid-template-columns: 3fr 4fr;
-  grid-column-gap: 15px;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
   padding: 15px;
 }
 
@@ -1236,11 +1316,39 @@ time {
   margin-top: 1em;
 }
 
+@media screen and (max-width: 960px) {
+  .boxShowcase .gameDetails li {
+    display: block;
+  }
+  .boxShowcase .gameDetails li + li {
+    margin-left: 0;
+  }
+}
+
 @media screen and (max-width: 800px) {
+  .boxShowcaseWrap {
+        grid-template-areas: 'aside' 'main';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .boxPrice {
+    border-bottom: 1px solid #495252;
+    border-top: none;
+    padding-bottom: 30px;
+    padding-top: 0;
+  }
+  .breadcrumbWrap {
+    margin-bottom: 30px;
+  }
   .devShowcaseWrap {
         grid-template-areas: "header header header" "tile tile tile";
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+  }
+  .boxExtrasWrap {
+        grid-template-areas: "header" "tile";
+    -ms-grid-columns: none;
+        grid-template-columns: none;
   }
 }
 
@@ -1336,6 +1444,11 @@ time {
     -ms-grid-columns: none;
         grid-template-columns: none;
         grid-template-areas: "image" "data";
+  }
+  .boxTile {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+        grid-template-areas: 'image' 'text' 'cta';
   }
 }
 

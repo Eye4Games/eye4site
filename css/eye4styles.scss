@@ -18,6 +18,7 @@ $clairRibbon:#742C6C 0%,darken(#742C6C,12%) 100%;
 $clairBG: #742C6C;
 $alakaRibbon:#009345 0%,darken(#009345,15%) 100%;
 $alakaBG: #009345;
+$bluffBG: #2a2147;
 
 *,*+*{
     box-sizing: border-box;
@@ -616,10 +617,6 @@ time{
     background-color: $darkerBlack;
     padding: 25px 50px 30px;
     }
-.boxExtras{
-    background-color: $darkestBlack;
-    padding: 25px 50px 30px;
-    }
 .breadcrumbWrap{
     @extend %container;
     }
@@ -636,7 +633,7 @@ time{
         padding: 0 5px;
         }
     }
-.boxShowcaseWrap, .boxExtrasWrap{
+.boxShowcaseWrap{
     @extend %container;
     grid-template-columns: 4fr 1fr 4fr;
     grid-column-gap: 30px;
@@ -652,6 +649,10 @@ time{
     &.rise{fill:lighten($riseBG,10%);}
     &.alaka{fill:$alakaBG;}
     &.clair{fill:$clairBG;}
+    &.bluff{
+        .mainColor{fill:$lightBlack}
+        .dropShadow{fill:rgba($lightBlack,.15)}
+        }
     }
 .boxShowcase{
     .gameDetails{
@@ -669,6 +670,7 @@ time{
             width: 100px;
             }
         }
+    &.bluffGame{background-color: $bluffBG;}
     }
 .boxDetails{
     position: sticky;
@@ -699,8 +701,51 @@ time{
         }
     .buyButton{
         border-radius: 3px;
-        font-size: 2.4em;
+        font-size: 2em;
         padding: 10px 8px;
+        text-decoration: none;
+        &:hover{
+            background-color: $mainBlue;
+            box-shadow: 0 3px 5px $darkestBlack;
+            }
+        }
+    }
+
+.boxExtras{
+    background-color: $darkestBlack;
+    padding: 25px 50px 30px;
+    }
+.boxExtrasWrap{
+    @extend %container;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "header header" "tile tile";
+    grid-gap: 25px;
+    h1{
+        grid-area: header;
+        margin-bottom: 0;
+        }
+    }
+.boxTile{
+    display: grid;
+    background-color: lighten($darkestBlack,5%);
+    grid-template-areas: 'image text' '. cta';
+    grid-template-columns:3fr 4fr;
+    grid-template-rows: 1fr auto;
+    gap:25px;
+    padding: 25px;
+    &:last-child{
+        margin-bottom: 0;
+        }
+    & > {display: grid ;}
+    img{grid-area: image;}
+    .content{grid-area: text;}
+    .cta{
+        grid-area: cta;
+        width: 100%;
+        &:hover{
+            background-color: white;
+            color: $darkerBlack;
+            }
         }
     }
 
@@ -777,7 +822,7 @@ time{
     box-shadow: 0px 3px 5px rgba($mainBlack,.2);
     display: grid;
     grid-template-columns: 3fr 4fr;
-    grid-column-gap: 15px;
+    column-gap: 15px;
     padding: 15px;
     &:last-child{
         margin-bottom: 0;

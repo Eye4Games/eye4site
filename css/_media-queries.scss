@@ -1,7 +1,30 @@
+@media screen and (max-width:960px){
+    .boxShowcase .gameDetails li{
+        display: block;
+        & + li{margin-left: 0;}
+        }
+    }
 @media screen and (max-width:800px){
+    .boxShowcaseWrap{
+        grid-template-areas: 'aside' 'main';
+        grid-template-columns: 1fr;
+        }
+    .boxPrice{
+        border-bottom: 1px solid $midBlack;
+        border-top: none;
+        padding-bottom: 30px;
+        padding-top: 0;
+        }
+    .breadcrumbWrap{
+        margin-bottom: 30px;
+        }
     .devShowcaseWrap{
         grid-template-areas: "header header header" "tile tile tile";
         grid-template-columns: repeat(3,1fr);
+        }
+    .boxExtrasWrap{
+        grid-template-areas: "header" "tile";
+        grid-template-columns: none;
         }
     }
 
@@ -74,6 +97,10 @@
     .labTile{
         grid-template-columns: none;
         grid-template-areas: "image" "data";
+        }
+    .boxTile{
+        grid-template-columns: none;
+        grid-template-areas: 'image' 'text' 'cta';
         }
     }
     
