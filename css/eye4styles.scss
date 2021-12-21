@@ -484,9 +484,14 @@ time{
 //*******************************************************RULES
 .textShowcaseWrap{
     @extend %container;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 3px 5px rgba($darkestBlack,.1);
+    max-width: 800px;
+    padding: 50px;
     }
 .textShowcase{
-    background-color: white;
+    background-color: lighten($lightBlack,15%);
     color: $darkerBlack;
     padding: 20px 25px 50px;
     h1, h2, h3, h4{color: $mainBlack;}
@@ -496,13 +501,17 @@ time{
         & + h3{margin-top: 0;}
         }
     h3{margin: 30px 0 10px;}
-    h4{margin: 15px 0 0;}
+    h4{
+        font-size: 1.9em;
+        margin: 25px 0 0;
+        }
     blockquote{
         font-style: italic;
         }
     p{
-        font-size: 1.6em;
-    }
+        font-size: 1.9em;
+        line-height: 1.7em;
+        }
     ol, ul{
         padding-left: 20px;
         }
@@ -515,7 +524,7 @@ time{
         list-style-type: decimal;
         }
     li{
-        font-size: 1.6em;
+        font-size: 1.9em;
         li{font-size: 1em;}
         &+li{margin-top: 5px;}
         p{font-size: 1em;}
