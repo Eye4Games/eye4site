@@ -97,6 +97,7 @@ h2{
     font-weight: 500;
     color: $lightBlack;
     display: block;
+    line-height: 1.5;
     margin-bottom: 15px;
     }
 h3{
@@ -145,9 +146,7 @@ time{
 .textOnly p{
     font-size: 1.8em;
     line-height: 1.7em;
-    & + p{
-        margin-bottom: 30px;
-        }
+    & + p{margin-bottom: 15px;}
     }
 
 //
@@ -653,15 +652,16 @@ time{
 .boxName{
     width: 100%;
     height: auto;
-    fill: white;
+    fill:$lightBlack;
     margin: 30px 0 25px;
-    &.rise{fill:lighten($riseBG,10%);}
-    &.alaka{fill:$alakaBG;}
-    &.clair{fill:$clairBG;}
-    &.bluff{
-        .mainColor{fill:$lightBlack}
-        .dropShadow{fill:rgba($lightBlack,.15)}
-        }
+    .mainColor{fill:$lightBlack}
+    .dropShadow{fill:rgba($lightBlack,.15)}
+    &.alaka{
+        .mainColor{fill: lighten($alakaBG,5%);}
+    }
+    &.clair{fill: lighten($clairBG,10%);}
+    &.rise{fill: lighten($riseBG,5%);}
+    &.bluff{.mainColor{fill:#bebdcf;}}
     }
 .boxShowcase{
     .gameDetails{
@@ -688,6 +688,7 @@ time{
     }
 .boxImg, .extraImg{
     align-content: center;
+    justify-self: center;
     }
 .boxImg{
     padding-bottom: 30px;
@@ -737,7 +738,7 @@ time{
 .boxTile{
     display: grid;
     background-color: lighten($darkestBlack,5%);
-    grid-template-areas: 'image text' '. cta';
+    grid-template-areas: 'image text' 'cost cta';
     grid-template-columns:3fr 4fr;
     grid-template-rows: 1fr auto;
     gap:25px;
@@ -754,6 +755,15 @@ time{
         &:hover{
             background-color: white;
             color: $darkerBlack;
+            }
+        }
+    .cost{
+        grid-area: cost;
+        align-self: center;
+        color: white;
+        &.discount{
+            text-decoration: line-through;
+            color: $lightBlack;
             }
         }
     }
