@@ -191,6 +191,10 @@ time {
   margin-bottom: 15px;
 }
 
+.textOnly h3 {
+  margin-top: 45px;
+}
+
 .header {
   padding: 0 25px;
   background-color: #313737;
