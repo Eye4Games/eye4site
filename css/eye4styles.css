@@ -1044,7 +1044,6 @@ time {
 
 .boxImg {
   padding-bottom: 30px;
-  margin-bottom: 15px;
 }
 
 .boxImg img {
@@ -1163,6 +1162,77 @@ time {
 .boxTile .cost.discount {
   text-decoration: line-through;
   color: #BCCAD0;
+}
+
+.boxImg {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'img img' 'control-f control-b';
+  gap: 20px 10px;
+}
+
+.boxImg input {
+  display: none;
+}
+
+.boxImg img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: img;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.sideLabel {
+  border: 1px solid #495252;
+  border-radius: 50%;
+  color: #495252;
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 8px 11px;
+}
+
+.sideLabel.front {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: control-f;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.sideLabel.back {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: control-b;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.sideLabel:hover {
+  background-color: #1A1A1A;
+}
+
+input#front:checked ~ .sideLabel.front,
+input#back:checked ~ .sideLabel.back {
+  background-color: #495252;
+  color: #252529;
+}
+
+input#front:checked ~ img#box-front {
+  display: block;
+}
+
+input#front:checked ~ img#box-back {
+  display: none;
+}
+
+input#back:checked ~ img#box-back {
+  display: block;
+}
+
+input#back:checked ~ img#box-front {
+  display: none;
 }
 
 .labsIntro {
