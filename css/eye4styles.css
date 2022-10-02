@@ -1003,6 +1003,10 @@ time {
   fill: #bebdcf;
 }
 
+.boxName.pizza {
+  fill: #31BBAC;
+}
+
 .boxShowcase .gameDetails {
   margin-bottom: 10px;
 }
