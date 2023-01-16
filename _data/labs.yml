@@ -1,0 +1,26 @@
+- name: Pizza City
+  date: N/A
+  image: dev-tile-pizza.webp
+  release: N/A
+  description: A trick taking game where you're forced into a low or high bid.
+  status: In Progress
+  progress: midProgress
+  link: https://eye4games.com
+
+- name: Obligation
+  date: Spring 2022
+  image: dev-tile-obligation.webp
+  release: dev-tile-obligation-release.webp
+  description: A trick taking game where you're forced into a low or high bid.
+  status: Released
+  progress: maxProgress
+  link: https://eye4games.itch.io/obligation
+
+- name: Muses
+  date: Winter 2020
+  image: dev-tile-muses.webp
+  release: N/A
+  description: A light puzzle game of artists praying to the Muses for inspiration.
+  status: Released
+  progress: maxProgress
+  link: https://eye4games.itch.io/muses

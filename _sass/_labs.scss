@@ -1,0 +1,66 @@
+//*********************In Labs Summary
+.inTheLab{
+    background-color: $darkestBlack;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .devProgress{
+        &::after{border-color: $labYellow}
+        &.maxProgress{border-color: white}
+        }
+    .statusBadge{
+        background-color: $labYellow;
+        color: $mainBlack;
+        }
+    }
+
+.inTheLabWrap{
+    @extend %container;
+    grid-template-areas: "header header header header" "text text tile tile";
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 2rem;
+    h1{grid-area: header;}
+    .textSummary{
+        grid-area: text;
+        margin-bottom: 2rem;
+        }
+    }
+
+.statusBadge{
+    background-color: $mainBlue;
+    border-radius: 2px;
+    box-shadow: 0 .2em .5em rgba(black,.2);
+    color: white;
+    padding: .5em .8em;
+    position: absolute;
+    text-decoration: none;
+    bottom: 12px;
+    right: 10px;
+    }
+.maxProgress .statusBadge{
+    background-color: white;
+    color: $mainBlack;
+    }
+
+.devTileMini{
+    img{
+        box-shadow: 0 .25em .5em black;
+        }
+    }
+.devProgress{
+    border-top: .5rem solid rgba(white,.5);
+    position: relative;
+    &::after{
+        content: '';
+        border: .25rem solid $mainBlue;
+        position: absolute;
+        top: -.5rem; left: 0;
+        }
+    &.minProgress::after{width: calc(12.5% - .5rem);}
+    &.minorProgress::after{width: calc(25% - .5rem)}
+    &.midProgress::after{width: calc(50% - .5rem);}
+    &.muchProgress::after{width: calc(75% - .5rem)}
+    &.maxProgress::after{
+        border-color: white;
+        width: calc(100% - .5rem);
+        }
+    }

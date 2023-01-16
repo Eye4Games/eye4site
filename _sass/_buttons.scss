@@ -1,0 +1,29 @@
+.button{
+    background-color: $mainBlue;
+    border-radius: .25rem;
+    color: white;
+    padding: .5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    &.big{
+        font-size: 2em;
+        padding: 1rem 2rem;
+        }
+    &:hover{
+        color: $mainBlack;
+        background-color: white;
+        box-shadow: rgba(black,.5) 0 3px 5px;
+        }
+    }
+
+.buyButton{
+    background-color: white;
+    border-radius: .25rem;
+    color: black;
+    font-size: 1.8em;
+    font-weight: 700;
+    padding: .5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    mix-blend-mode: screen;
+    }

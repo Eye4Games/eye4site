@@ -1,0 +1,83 @@
+//
+//*************************************************TYPOGRAPHY
+
+body{
+    color: white;
+    font-size: 62.5%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+    }
+
+h1{
+    border-top: 1px solid white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 3.6em;
+    line-height: .8em;
+    margin-bottom: 1rem;
+    padding-top: .5rem;
+    }
+h2{
+    font-size: 2.4em;
+    font-weight: 700;
+    display: block;
+    line-height: 1.5;
+    margin-bottom: .25rem;
+    }
+h3{
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: .25em;
+    }
+h4{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8em;
+    font-weight: 500;
+    line-height: 1.2em;
+    padding-bottom: .25rem;
+    text-transform: uppercase;
+    }
+h5{
+    font-style: italic;
+    font-size: 1.4em;
+    }
+p,
+ul > li{
+    font-size: 1.8em;
+    line-height: 1.5rem;
+    strong{
+        font-weight: 700;
+        }
+    em{
+        font-style: italic;
+        }
+    }
+p a{
+    border-bottom: 2px dotted rgba($mainBlue,.2);
+    color: $mainBlue;
+    text-decoration: none;
+    &:hover{
+        color: lighten($mainBlue,10%);
+        border-bottom: 2px dotted $mainBlue;
+        }
+    }
+p small{
+    font-size: 0.875rem;
+    }
+p+p{
+    margin-top: 1rem;
+    }
+time{
+    color: $lightBlack;
+    display: block;
+    font-size: 1.6em;
+    margin-bottom: .5em;
+    }
+.textOnly p{
+    font-size: 1.8em;
+    line-height: 1.7em;
+    & + p{margin-bottom: 15px;}
+    }
+.textOnly{
+    h3{margin-top: 45px;}
+    }

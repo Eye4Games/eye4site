@@ -1,0 +1,21 @@
+// Palette
+$mainBlack:#313737;
+$midBlack: lighten($mainBlack,10%);
+$lightBlack: #BCCAD0;
+$darkerBlack: #252529;
+$darkestBlack:#1A1A1A;
+$mainBlue:#29ABE2;
+$labYellow: #FFC60B;
+
+$aloftRibbon:#CCE0F4 0%,darken(#CCE0F4,40%) 100%;
+$riseRibbon:#BF1A24 0%,darken(#BF1A24,20%) 100%;
+$riseBG: #BF1A24;
+$clairRibbon:#742C6C 0%,darken(#742C6C,12%) 100%;
+$clairBG: #742C6C;
+$alakaRibbon:#009345 0%,darken(#009345,15%) 100%;
+$alakaBG: #009345;
+$bluffBG: #2a2147;
+
+body{
+    background-color: $darkerBlack;
+    }

@@ -1,0 +1,37 @@
+//
+//*****************************************************FOOTER
+.mainFooter{
+    background-color: $mainBlack;
+    color: white;
+    padding: 2em 2%;
+    text-align: center;
+    }
+ .socialLinks{
+     display: flex;
+    max-width: $mainWidth;
+    margin: 0 auto;
+    justify-content: center;
+    }    
+.socialLinks a{
+        background-color: $mainBlue;
+        border-radius: 50%;
+        line-height: 0;
+        margin: 0 10px;
+        width: 40px;
+        padding: 10px;
+        &.mail{padding: 12px;}
+        &:hover{
+            background: white;
+            box-shadow: 0  2px 4px $darkestBlack;
+            }
+        &:first-child{margin-left: 0;}
+        &:last-child{margin-right: 0;}
+        svg{fill:$mainBlack}
+    }
+.mediaResources{
+    margin: 15px 0 0;
+    }
+.copyright{
+    font-size: 1.4em;
+    margin-top: 1em;
+    }

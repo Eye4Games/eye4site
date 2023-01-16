@@ -1,0 +1,17 @@
+$mainWidth: 128em;
+
+%container{
+    display: grid;
+    column-gap: 2rem;
+    margin: 0 auto;
+    max-width: $mainWidth;
+    }
+
+div[class$="Wrap"],
+div[class$="Wrapper"]{
+    @extend %container;
+    }
+section{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    }

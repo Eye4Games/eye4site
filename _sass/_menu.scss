@@ -1,0 +1,133 @@
+//
+//*****************************************************HEADER
+
+.header{
+    background-color: $mainBlack;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    }
+.mainHeader{
+    display: flex;
+    justify-content: space-between;
+    min-height: 10em;
+    width: 100%;
+    }
+
+//**************************************Logo
+.logo{
+    display: flex;
+    max-height: 75px;
+    max-width: 239px;
+    margin-top: 13px;
+    }
+.logo svg{
+    .eye-symbol, .eye-word{
+        fill: white;
+        }
+    .games-word{
+        fill: $mainBlue;
+        }
+    }
+.logo:hover svg{
+    .eye-symbol{fill: $mainBlue;}
+    }
+
+//*********************************Navigation
+.mainNav{
+    display: flex;
+    }
+
+.active{
+    a{color: $mainBlue;}
+    &.labs a{color: $labYellow;}
+    }
+
+//
+//***************************************RESPONSIVE NAV
+
+/* checkboxes invisible and use no space */
+.menuIcon + input[type=checkbox] {
+    opacity: 0;
+    height: 0;
+    width: 0;     
+   }
+.navList{
+  text-align: right;
+  }
+.navLinks{
+  a{
+      border-bottom: 1px solid transparent;
+      color: white;
+      display: inline-block;
+      font-family: "Oswald";
+      font-size: 2.4em;
+      padding: 1em 0 .25em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: border-bottom ease-in-out 300ms;
+      &:hover{
+          color: $mainBlue;
+          border-bottom: 1px dotted $lightBlack;
+          transition: border-bottom ease-in-out 300ms;
+          }
+      }
+  }
+   
+//Until small     
+@media screen and (min-width: 50em){
+
+.menuIcon, .menuCheck{
+  display: none;
+  }
+.navLinks{
+  display: flex;
+  a{margin-left: 1em;}
+  }
+
+}
+
+//At mobile size
+@media screen and (max-width: 50em){
+.menuCheck{
+  display: inline;
+  }
+.logo svg{
+  position: absolute;
+  clip-path: inset(0 115px 0 0);
+  }
+/* cursor changes when you mouse over this class */
+.menuIcon {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  user-select: none;
+  svg{
+      display: inline-block;
+      fill: white;
+      max-width: 4em;
+      }
+  }                       
+/* prevents sublists below unchecked labels from displaying */
+.menuIcon + input[type=checkbox] + ol
+       {
+          height: 0;
+          overflow: hidden;
+          transition: height ease-in-out 300ms;
+       }
+/* display submenu on click */
+.menuIcon + input[type=checkbox]:checked + ol
+          {
+          display: block;
+          // number of links * 5 + 1
+          height: 6*5.5em+1em;
+          overflow: auto;  
+          transition: height ease-in-out 300ms;
+          }
+.navList{
+  margin-top: 3em;
+  }
+.navLinks{
+  display: block;
+  }
+
+}

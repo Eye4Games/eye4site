@@ -1,0 +1,44 @@
+//************************************About
+.about{
+    background-color: $darkerBlack;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    }
+.aboutWrap{
+    @extend %container;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    }
+.aboutText{
+    margin-bottom: 25px;
+    }
+.teamContainer{
+    display: grid;
+    column-gap: 2rem;
+    justify-content: space-between;
+    padding-top: 2rem;
+    }
+.teamCol{
+    display: grid;
+    column-gap: 2rem;
+    grid-template-areas: 'header header header' 'tile tile tile' ;
+    grid-template-columns: repeat(3, 1fr);
+    h2{
+        grid-area: header;
+        margin-bottom: 1rem;
+        }
+    }
+.teamTile{
+    text-align: center;
+    margin-bottom: 30px;
+    img{
+        border-radius: 50%;
+        margin-bottom: 10px;
+        background-image: linear-gradient(to bottom, $darkestBlack, $darkerBlack);
+        }
+    h4{
+        font-family: 'Oswald', sans-serif;
+        font-weight: 600;
+        }
+    }

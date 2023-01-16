@@ -1,9 +1,5 @@
-
-
-mixture.json
-
-
-css/eye4styles.min.css
-
-prepros.cfg
-*.map
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
