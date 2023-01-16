@@ -814,10 +814,12 @@ time {
 .textShowcase table {
   margin: 10px 0;
   min-width: 300px;
+  font-size: 1.1875rem;
+  text-align: left;
 }
 
 .textShowcase table th, .textShowcase table td {
-  padding: 8px;
+  padding: 12px;
 }
 
 .textShowcase table th {
