@@ -1,5 +1,5 @@
 - name: Rise of the Robotariat
-  players: "3-5"
+  players: "3–5"
   time: 45 Min
   mechanics: Co-op Move & Act
   box: rise-box.webp
@@ -8,7 +8,7 @@
   color: riseGame
 
 - name: Clairoyance
-  players: "2-5"
+  players: "2–5"
   time: 15 Min per Player
   mechanics: Player Elimination
   box: clair-box.webp
@@ -17,7 +17,7 @@
   color: clairGame
 
 - name: AlakaSLAM
-  players: "2-4"
+  players: "2–4"
   time: 30–45 Min
   mechanics: Hand Management
   box: alaka-box.webp

@@ -1,0 +1,64 @@
+- name: 'Eye4Labs Release'
+  game: Bluff the Bullet
+  summary: 'Released in Spring 2019, an earlier version of <em>Bluff the Bullet.</em>'
+  image: btb-gumroad-art.webp
+  price: $0
+  link: https://gumroad.com/l/btb-labs
+  cta: Try It
+
+- name: 'Color Print and Play'
+  game: AlakaSLAM
+  summary: 'All of <em>AlakaSLAM</em>, in convenient letter-sized form.'
+  image: alaka-pdf-color.webp
+  price: $5
+  link: https://eye4games.gumroad.com/l/alaka-pnp
+  cta: Buy It
+
+- name: 'B&W Print and Play'
+  game: AlakaSLAM
+  summary: 'All of <em>AlakaSLAM</em>, right there in black & white.'
+  image: alaka-pdf-bw.webp
+  price: $0
+  link: https://eye4games.gumroad.com/l/wBssP
+  cta: Try It
+
+- name: 'Akashic Arcadia Character Expansion'
+  game: Clairvoyance
+  summary: 'Welcome, friends to the <em>Akashic Arcadia</em>, a set of five more psychics seeking to prove their mettle on the antique-strewn battlefield of Clairvoyance.'
+  image: clair-pdf-expansion.webp
+  price: $0
+  link: https://eye4games.gumroad.com/l/vXuMh
+  cta: Download Now
+
+- name: 'Color Print and Play'
+  game: Clairvoyance
+  summary: 'Wanna check out <em>Clairvoyance</em>, but have the production be on your own terms? Well, this print and play is definitely for you.'
+  image: clair-pdf-color.webp
+  price: $7
+  link: https://eye4games.gumroad.com/l/NGmo
+  cta: Download Now
+
+- name: 'B&W Print and Play'
+  game: Clairvoyance
+  summary: 'Check out <em>Clairvoyance</em>, with this black and white print and play.'
+  image: clair-pdf-bw.webp
+  price: $0
+  link: https://eye4games.gumroad.com/l/qkBeE
+  cta: Try It
+
+
+- name: 'Book'
+  game: Rise of the Robotariat
+  summary: 'The lighthearted companion novella <em>For the Glory of the Motherboard</em> recounts the stories of nine characters from <em>Rise of the Robotariat</em> during the time before the board game takes place, and reads as a stand-alone collection.<br><br>You can <a href="http://rise.eye4games.com/reports/">read some samples »</a>'
+  image: rise-book.webp
+  price: $8.99
+  link: https://www.amazon.com/Glory-Motherboard-Rise-Robotariat/dp/1977871070
+  cta: Buy the Book
+
+- name: 'PDF Print and Play'
+  game: Rise of the Robotariat
+  summary: Do you want to join the robot revolution, preferably in letter-sized format? Well then, we've got a print and play for you.
+  image: rise-pdf.webp
+  price: $7
+  link: https://eye4games.gumroad.com/l/hIjA
+  cta: Download Now

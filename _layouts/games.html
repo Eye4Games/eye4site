@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<section class="breadcrumbs">
+    <div class="breadcrumbsWrap">
+        <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../">Games</a></li>
+            <li>{{page.title}}</li>
+        </ul>
+    </div>
+</section>
+
+<section class="boxShowcase">
+    <div class="boxShowcaseWrap">
+        {{content}}
+    </div><!-- boxShowcaseWrap -->
+</section><!-- boxShowcase -->
+
+
+{% if page.extras %}
+<section class="boxExtras">
+    <div class="boxExtrasWrap">
+        <h1>Extras</h1>
+        {% for extras in site.data.extras %}
+        {% if extras.game == page.title %}
+            <div class="extraTile">
+                <img src="/assets/images/{{extras.image}}" alt="" class="extraImage">
+                <div class="extraContent">
+                    <h2>{{extras.name}}</h2>
+                    <p>{{extras.summary}}</p>
+                </div>
+            <p class="cost">{{extras.price}}</p>
+            <a href="{{extras.link}}" class="button cta">{{extras.cta}}</a>
+            </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+{% include newsletter-cta.html %}
