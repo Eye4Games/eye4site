@@ -1,3 +1,6 @@
+//
+//*****************************************************LABS
+
 //*********************In Labs Summary
 .inTheLab{
     background-color: $darkestBlack;
@@ -17,7 +20,7 @@
     @extend %container;
     grid-template-areas: "header header header header" "text text tile tile";
     grid-template-columns: repeat(4,1fr);
-    column-gap: 2rem;
+    column-gap: $columnGap;
     h1{grid-area: header;}
     .textSummary{
         grid-area: text;
@@ -62,5 +65,74 @@
     &.maxProgress::after{
         border-color: white;
         width: calc(100% - .5rem);
+        }
+    }
+
+//
+//*****************************************************EYE4LABS
+.labsIntro{
+    background-color: $darkerBlack;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    }
+.labsIntroWrap{
+    grid-template-areas: 'logo . intro';
+    grid-template-columns: 3fr 1fr 8fr;
+    column-gap: $columnGap;
+    }
+.labsLogo{
+    grid-area: logo;
+    }
+.labsIntroText{
+    grid-area: intro;
+    }
+.labButton{
+    background-color: white;
+    color: $darkerBlack;
+    display: inline-block;
+    margin-top: 15px;
+    text-shadow: none;
+    &:hover{
+        background-color: $labYellow;
+        color: white;
+        }
+    }
+.labsShowcase{
+    background-color: $mainBlack;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    }
+.labsShowcaseWrap{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "header header" "tile tile";
+    gap: 2rem;
+    h1{
+        grid-area: header;
+        margin-bottom: 0;
+        }
+    }
+.labTile{
+    border: 1px solid $labYellow;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    column-gap: $columnGap;
+    padding: 1rem;
+    &:last-child{
+        margin-bottom: 0;
+        }
+    }
+.labTile .gameImage img{
+    box-shadow: 0 .2em .4em rgba($darkestBlack,.2);
+    & + .button{
+        margin-top: 1rem;
+        }
+    }
+.labTile .labData{
+    time{
+        color: $labYellow;
+        font-weight: 700;
+        }
+    h4{
+        margin-top: 15px;
         }
     }
