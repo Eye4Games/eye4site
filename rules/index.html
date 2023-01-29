@@ -1,0 +1,35 @@
+---
+title: Eye4Games
+section: Rules
+permalink: rules
+layout: default
+---
+<section class="breadcrumbs">
+    <div class="breadcrumbsWrap">
+        <ul>
+            <li><a href="../">Home</a></li>
+            <li>Rules</li>
+        </ul>
+    </div>
+</section>
+
+<section class="rules">
+    <div class="rulesWrap">
+        <h1>Rulebooks</h1>
+        {% assign sorted_rules = site.data.rules | sort:'name' %}
+        {% for rules in sorted_rules %}
+        <div class="rulesListing">
+            <h2><a href="{{rules.link}}">{{rules.name}}</a></h2>
+            <ul class="meta">
+                <li>{{rules.players}}</li>
+                <li>{{rules.time}}</li>
+                <li>{{rules.mechanics}}</li>
+            </ul>
+            <p><em>{{rules.summary}}</em></p>
+            <p><a href="{{rules.link}}">Read Rules »</a></p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% include newsletter-cta.html %}

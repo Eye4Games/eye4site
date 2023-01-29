@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<section class="breadcrumbs">
+    <div class="breadcrumbsWrap">
+        <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href="../rules">Rules</a></li>
+            <li>{{page.title}}</li>
+        </ul>
+    </div>
+</section>
+
+<section class="rulesText textOnly">
+    <div class="rulesTextWrap">
+        <main>
+            {{content}}
+        </main>
+        <aside class="toc">
+            <h3>Table of Contents</h3>
+            {% include toc.html html=content h_min=2 h_max=3 %}
+            <ul>
+                <li><a href="#">Back to Top</a></li>
+            </ul>
+        </aside>
+    </div>
+</section>
+
