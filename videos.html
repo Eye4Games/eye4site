@@ -1,13 +1,36 @@
 ---
-title: Eye4Games
-section: Videos
-permalink: /videos
+title: Videos
+section: Eye4Games
 layout: default
 ---
 
-<section>
-    {% for item in site.data.videos %}
-    <img src="{{ video.thumb }}" alt=" {{ video.name}}">
-    {% endfor %}
-    test
+<section class="breadcrumbs">
+    <div class="breadcrumbsWrap">
+        <ul>
+            <li><a href="../">Home</a></li>
+            <li>Videos</li>
+        </ul>
+    </div>
 </section>
+
+<section class="videoShowcase">
+    <div class="videoShowcaseWrap">
+        <h1>Videos</h1>
+        {% for videos in site.data.videos %}
+        <div class="videoTile">
+            <a href="{{videos.link}}">
+                <img src="assets/images/{{ videos.thumb }}" alt=" {{ videos.name}}">
+            </a>
+            <h2>{{ videos.name }}</h2>
+            <div class="metadata">
+                <time>{{videos.date}}</time><a href="{{videos.related-game-link}}">{{videos.related-game}}</a>
+            </div>
+            <div class="cta">
+                <p><a href="{{videos.link}}">Watch the Video »</a></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% include newsletter-cta.html %}
