@@ -54,13 +54,13 @@
 .navList{
   text-align: right;
   }
-.navLinks{
+.navLink{
   a{
       border-bottom: 1px solid transparent;
       color: white;
       display: inline-block;
       font-family: "Oswald";
-      font-size: 2.4em;
+      font-size: 1.5rem;
       padding: 1em 0 .25em;
       text-decoration: none;
       text-transform: uppercase;
@@ -71,6 +71,7 @@
           transition: border-bottom ease-in-out 300ms;
           }
       }
+    &.active a{color: $mainBlue;}
   }
    
 //Until small     
@@ -87,7 +88,7 @@
 }
 
 //At mobile size
-@media screen and (max-width: 50em){
+@media screen and (max-width: 55em){
 .menuCheck{
   display: inline;
   }
@@ -119,7 +120,7 @@
           {
           display: block;
           // number of links * 5 + 1
-          height: 6*5.5em+1em;
+          height: 6*6em+1em;
           overflow: auto;  
           transition: height ease-in-out 300ms;
           }
@@ -131,3 +132,34 @@
   }
 
 }
+
+//********************************* Breadcrumbs
+.breadcrumbs{
+  background-color: $darkestBlack;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  a{
+    border-bottom: 2px dotted rgba($mainBlue,.2);
+    color: $mainBlue;
+    text-decoration: none;
+    &:hover{
+        color: lighten($mainBlue,10%);
+        border-bottom: 2px dotted $mainBlue;
+        }
+    &:active{
+        color: darken($mainBlue,50%);
+        }
+    }
+  ul li{
+    display: inline;
+    font-size: 1rem;
+    & + li:before {
+      content: "›";
+      padding-left: .5rem;
+      padding-right: .5rem;
+      color: white;
+      border: none;
+      cursor: default;
+      }
+    }
+  }

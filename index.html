@@ -1,6 +1,6 @@
 ---
-title: Eye4Games
-section: Home
+title: Home
+section: Eye4Games
 permalink: /
 layout: default
 announcement: active
@@ -13,7 +13,7 @@ announcement: active
 <section class="gameShowcase">
     <div class="gameShowcaseWrapper">
         <h1>Released Games</h1>
-        {% for games in site.data.games %}
+        {% for games in site.data.games limit: 3 %}
             
             <div class="gameTile {{ games.color }}">
                 <div class="gameImg">
@@ -51,11 +51,13 @@ announcement: active
         <div class="textSummary">
             <h2>Latest Free Game: Obligation</h2>
             <p>Our most recent gift to you, <em>Obligation</em>,  a trick taking game for 3–5 where you are given a bid to aim for, but you can influence what suit is trump and what suit counts toward your bid.</p>
+            <p>You can download our sixth release <a href="https://eye4games.itch.io/obligation" target="_blank">on Itch</a> (where all our free labs will be) right now.</p>
             <p><a href="/labs">See All the Labs Releases »</a></p>
         </div> <!-- textSummary -->
         
         {% for labs in site.data.labs limit:2 %}
             <div class="devTileMini">
+                <a href="{{labs.link}}">
                 <div class="devProgress {{labs.progress}}">
                     {% if labs.status != "Released" %}
                     <img src="assets/images/{{labs.image}}" alt="">
@@ -64,6 +66,7 @@ announcement: active
                     {% endif %}
                     <span class="statusBadge">{{labs.status}}</span>
                 </div>
+                </a>
             </div><!--devTileMini-->
         {% endfor %}
     </div><!--inTheLabWrap-->

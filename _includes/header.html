@@ -29,10 +29,11 @@
                     </label>
                     <input type="checkbox" id="menuCheck" />
                     <ol class="navLinks">
-                        <li class="navLink"><a href="/">Home</a></li>
+                        
+                        <li class="navLink {% if page.title == 'Home' %}active{% endif %}"><a href="/">Home</a></li>
                         <li class="navLink"><a href="/updates">Newsletter</a></li>
-                        <li class="navLink"><a href="/labs">Labs</a></li>
-                        <li class="navLink"><a href="/videos">Videos</a></li>
+                        <li class="navLink {% if page.title == 'Labs' %}active{% endif %}"><a href="/labs">Labs</a></li>
+                        <li class="navLink {% if page.title == 'Videos' %}active{% endif %}"><a href="/videos">Videos</a></li>
                         <!--<li><a class="external" href="#">Podcast</a> </li>-->
                         <li class="navLink"><a class="external" href="http://eye4games.tumblr.com/">Blog</a></li>
                         <li class="navLink"><a class="external" href="https://gumroad.com/eye4games">Store</a></li>

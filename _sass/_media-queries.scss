@@ -1,0 +1,124 @@
+@media screen and (max-width: 60rem /* 960px */) {
+
+    .teamCol{
+        grid-template-columns: repeat(2,1fr);
+        }
+    .videoShowcaseWrap{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 'header header' 'tile tile';
+        }
+    .rulesTextWrap{
+        grid-template-columns: 8fr 4fr;
+        grid-template-areas: 'main aside';
+        }
+    .boxShowcaseWrap{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:'main aside';
+        }
+    .boxPrice{
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 100%;
+        align-items: stretch;
+        }
+    }
+
+@media  screen and (max-width: 800px) {
+  
+    .gameShowcaseWrapper, .labsShowcaseWrap, .boxExtrasWrap{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'header' 'tile';
+        }
+    .gameTile{
+        grid-template-columns: repeat(2, 1fr);
+        }
+    .announcementWrap{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'head' 'body';
+        }
+    .inTheLabWrap{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'header header' 'text text' 'tile tile';
+        }
+    .aboutWrap{
+        grid-template-columns: 1fr;
+        row-gap: $columnGap;
+        }
+    .teamCol{
+        grid-template-columns: repeat(3,1fr);
+        }
+    .labsIntroWrap{
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 'logo intro';
+        }
+    .components{
+        columns: 1;
+        }
+    .untilMed{display: none;}
+    }
+
+@media screen and (max-width: 650px) {
+    .videoShowcaseWrap{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'header' 'tile';
+        }
+    .rulesTextWrap, .boxShowcaseWrap{
+        grid-template-columns: 1fr;
+        row-gap: $columnGap;
+        grid-template-areas: 'aside' 'main';
+        }
+    .rulesText .toc, .boxDetails{
+        position: relative;
+        top: auto;
+        }
+    .components{
+        padding-left: 0;
+        li{
+            list-style-type: none;
+            display: inline-block;
+            }
+        li + li::before{
+            content: '/ ' ;
+            padding-left: .25rem;
+            }
+        }
+    .untilSmall{display: none;}
+
+    }
+
+@media screen and (max-width: 500px) {
+    .gameTile{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        }
+    .labsIntroWrap, .labTile{
+        grid-template-columns: 1fr;
+        row-gap: $columnGap;
+        }
+    .labsIntroWrap{
+        grid-template-areas: 'logo' 'intro';
+        }
+    .extraTile{
+        grid-template-areas: 'image' 'text' 'cta' 'cost';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        }
+    }
+
+@media screen and (max-width: 430px){
+    .inTheLabWrap{
+        grid-template-columns: 1fr;
+        grid-template-areas: unset;
+        row-gap: $columnGap;
+        h1, .textSummary{ grid-area: unset;}
+        }
+    .teamCol{
+        grid-template-columns: repeat(2,1fr);
+        }
+    }
+@media screen and (max-width: 400px){
+    .teamCol{
+        grid-template-columns: 1fr;
+        img{max-width: 20em;}
+        }
+    }

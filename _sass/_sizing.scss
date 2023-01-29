@@ -1,8 +1,9 @@
 $mainWidth: 128em;
+$columnGap: 2rem;
 
 %container{
     display: grid;
-    column-gap: 2rem;
+    column-gap: $columnGap;
     margin: 0 auto;
     max-width: $mainWidth;
     }
