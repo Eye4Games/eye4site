@@ -1,0 +1,173 @@
+//
+//*********************************************************BOX
+.boxShowcase{
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    p, ol, ul{
+        & + h2, & + h3, & + h4, & + h5{margin-top: 2rem;}
+        }
+    }
+.boxShowcaseWrap{
+    @extend %container;
+    grid-template-columns: 4fr 1fr 4fr;
+    grid-column-gap: 30px;
+    grid-template-areas: 'main . aside';
+    & main{grid-area: main;}
+    & aside{grid-area: aside;}
+    }
+.boxShowcase{
+    .gameDetails{
+        border-bottom: .2em solid $mainBlack;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        li{
+            display: inline;
+            & + li{margin-left: 15px;}
+            }
+        }
+    &.bluffGame{background-color: $bluffBG;}
+    }
+.boxDetails{
+    height: max-content;
+    position: sticky;
+    text-align: center;
+    top: 2rem;
+    }
+.boxImg, .extraImg{
+    align-content: center;
+    justify-self: center;
+    }
+.boxImg{
+    padding-bottom: 2rem;
+    img{
+        border-radius: 5px;
+        box-shadow: 15px 15px 10px $darkestBlack;
+        max-height: 350px;
+        }
+    }
+.boxPrice{
+    align-items: center;
+    border-top: 1px solid $midBlack;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 2rem;
+    p{
+        text-align: left;
+        }
+    }
+.components{
+    column-count: 2;
+    column-gap: $columnGap;
+    column-width: auto;
+    list-style-type: disc;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    }
+
+.boxExtras{
+    background-color: $darkestBlack;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    }
+.boxExtrasWrap{
+    @extend %container;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "header header" "tile tile";
+    grid-gap: 25px;
+    h1{
+        grid-area: header;
+        margin-bottom: 0;
+        }
+    }
+.extraTile{
+    display: grid;
+    border: .1em solid $midBlack;
+    grid-template-areas: 'image text' 'cost cta';
+    grid-template-columns:3fr 4fr;
+    grid-template-rows: 1fr auto;
+    gap:1rem;
+    padding: 2rem;
+    &:last-child{
+        margin-bottom: 0;
+        }
+    & > {display: grid ;}
+    img{
+        grid-area: image;
+        justify-self: center;
+        }
+    .extraContent{grid-area: text;}
+    .cta{
+        grid-area: cta;
+        width: 100%;
+        &:hover{
+            background-color: white;
+            color: $darkerBlack;
+            }
+        }
+    .cost{
+        grid-area: cost;
+        align-self: center;
+        color: white;
+        &.discount{
+            text-decoration: line-through;
+            color: $lightBlack;
+            }
+        }
+    }
+
+//*********************************************************Front/Back
+.boxImg{
+    display: grid;
+    grid-template-areas: 'img img' 'control-f control-b';
+    gap: 20px 10px;
+    input{
+        display: none;
+        }
+    img{
+        grid-area: img;
+        justify-self: center;
+        }    
+    }
+.sideLabel{
+    border: 1px solid $midBlack;
+    border-radius: 50%;
+    color: $midBlack;
+    display: inline-block;
+    font-size: 1rem;
+    padding-top: .4rem;
+    width: 2rem;
+    height: 2rem;
+    &.front{
+        grid-area: control-f;
+        justify-self: end;
+        }
+    &.back{
+        grid-area: control-b;
+        justify-self: start;
+        }
+    &:hover{
+        background-color: $darkestBlack;
+        }
+    }
+input#front:checked ~ .sideLabel.front,
+input#back:checked ~ .sideLabel.back{
+    background-color: $midBlack;
+    color: $darkerBlack;
+    }
+input#front:checked{
+    & ~ img#box-front{
+        display: block;
+        }
+    & ~ img#box-back{
+        display: none;
+        }
+    }
+input#back:checked{
+    & ~ img#box-back{
+        display: block;
+        }
+    & ~ img#box-front{
+        display: none;
+        }
+    }

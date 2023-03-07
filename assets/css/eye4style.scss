@@ -1,0 +1,69 @@
+---
+#for processing
+---
+
+@import "reset";
+
+*,*+*{
+    box-sizing: border-box;
+    }
+img{
+	max-width: 100%;
+	height: auto;
+	}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+    }
+
+@import "colors";
+@import "sizing";
+@import "typography";
+@import "menu";
+@import "buttons";
+@import "games";
+
+//
+//*************************************************Subscribe
+div.newsletterWrap{
+    max-width: 57.8em;
+    margin: 2rem auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    }
+.newsletter h3{
+    border-top: 1px solid white;
+    padding-top: .5rem;
+    margin-bottom: 1rem;
+    }
+
+//
+//*************************************************ANNOUNCEMENT
+.announcementWrap{
+    border: 1px solid white;
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 'head body';
+    }
+.announcementHead{
+    grid-area: 'head';
+    }
+.announcementBody{
+    grid-area: 'body';
+    }
+@import 'box';
+@import 'labs';
+@import 'team';
+@import 'videos';
+@import 'rules';
+@import 'footer';
+
+@import 'media-queries';

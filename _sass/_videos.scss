@@ -1,0 +1,36 @@
+.videoShowcaseWrap{
+    display: grid;
+    grid-template-areas: 'header header header' 'tile tile tile';
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    }
+.videoShowcase{
+    padding-top: 3rem;
+    padding-bottom: 0;
+    h1{
+        grid-area: header;
+        margin-bottom: 0;
+        }
+    }
+.videoTile{
+    border: 1px solid $midBlack;
+    display: grid;
+    row-gap: .5rem;
+    padding: 1rem;
+    .metadata a{
+        @extend %link;
+        }
+    .metadata time,
+    .metadata a{
+        display: inline;
+        font-size: .875rem;
+        }
+    .metadata time::after{
+        content: "•";
+        padding: 0 .5rem;
+        }
+    .cta{
+        padding-top: 1.5rem;
+        align-self:flex-end;
+        }
+    }

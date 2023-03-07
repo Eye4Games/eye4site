@@ -1,0 +1,69 @@
+- name: Pizza City
+  date: N/A
+  image: dev-tile-pizza.webp
+  release: N/A
+  description: A trick taking game where you're forced into a low or high bid.
+  pitch:
+  status: In Progress
+  progress: midProgress
+  link: https://eye4games.com
+
+- name: Obligation
+  date: Spring 2022
+  image: dev-tile-obligation.webp
+  release: dev-tile-obligation-release.webp
+  description: A trick taking game where you're forced into a low or high bid.
+  pitch: Be presented a target bid, vote to influence the trump and target suits.
+  status: Released
+  progress: maxProgress
+  link: https://eye4games.itch.io/obligation
+
+- name: Muses
+  date: Winter 2020
+  image: dev-tile-muses.webp
+  release: N/A
+  description: A light puzzle game of artists praying to the Muses for inspiration.
+  pitch: Voting for simultaneous action to show devotion to Muses.
+  status: Released
+  progress: maxProgress
+  link: https://eye4games.itch.io/muses
+
+- name: Concrete Jungle
+  date: Spring 2020
+  image: dev-tile-concrete.webp
+  release: N/A
+  description: An RPG where you defeat The Competition at the annual trade show supreme.
+  pitch: Business, animals, and business animals.
+  status: Released
+  progress: maxProgress
+  link: https://eye4games.itch.io/concrete-jungle
+
+- name: The Once and Future Cuisine
+  date: Winter 2019
+  image: dev-tile-cuisine.webp
+  release: N/A
+  description: A mad scramble for ingredients across the eras, all to satisfy the Time Tyrant's catering demands.
+  pitch: Assemble the best hand from across all time.
+  status: Released
+  progress: maxProgress
+  link: https://eye4games.itch.io/the-once-and-future-cuisine
+
+- name: Bluff the Bullet
+  date: Spring 2019
+  image: dev-tile-btb.webp
+  release: N/A
+  description: It’s a poker game with the highest of stakes, and the biggest pack of liars and cheats in the West.
+  pitch: Betting on unknown hands that can be cheated on with luck and guile.
+  status: Released
+  progress: maxProgress
+  link: https://eye4games.itch.io/bluff-the-bullet
+
+- name: What If, But Also
+  date: Winter 2018
+  image: dev-tile-wiba.webp
+  release: N/A
+  description: With only a set of conjunctions and a barrel of words, construct funny, poignant, and even dramatic situations and ideas.
+  pitch: Describing why you win is the game.
+  status: Released
+  progress: maxProgress
+  link: https://eye4games.itch.io/what-if-but-also

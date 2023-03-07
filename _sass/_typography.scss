@@ -1,0 +1,109 @@
+//
+//*************************************************TYPOGRAPHY
+
+body{
+    color: white;
+    font-size: 62.5%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+    }
+
+h1{
+    border-top: 1px solid white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 3.6em;
+    line-height: 1.125;
+    margin-bottom: 1rem;
+    padding-top: .5rem;
+    }
+h2{
+    font-size: 2.4em;
+    font-weight: 700;
+    display: block;
+    line-height: 1.25;
+    margin-bottom: .25rem;
+    }
+h3{
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: .25em;
+    }
+h4{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8em;
+    font-weight: 500;
+    line-height: 1.2em;
+    padding-bottom: .25rem;
+    text-transform: uppercase;
+    }
+h5{
+    font-style: italic;
+    font-size: 1.4em;
+    }
+p,
+ul > li, ol> li{
+    font-size: 1.8em;
+    line-height: 1.75rem;
+    strong{
+        font-weight: 700;
+        }
+    em{
+        font-style: italic;
+        }
+    }
+p a, %link{
+    border-bottom: 2px dotted rgba($mainBlue,.2);
+    color: $mainBlue;
+    text-decoration: none;
+    &:hover{
+        color: lighten($mainBlue,10%);
+        border-bottom: 2px dotted $mainBlue;
+        }
+    &:active{
+        color: darken($mainBlue,10%);
+        }
+    }
+p small{
+    font-size: 0.875rem;
+    }
+p+p, p+h3{
+    margin-top: 1rem;
+    }
+time{
+    color: $lightBlack;
+    display: block;
+    font-size: 1.6em;
+    }
+.textOnly{
+    a {
+        @extend %link;
+        }
+    p, ul li, ol li, table th, table td{
+        font-size: 1.25rem;
+        line-height: 2.125rem;
+        }
+    p + p{margin-bottom: 1rem;}
+    blockquote{
+        font-size: 1.5rem;
+        font-style: italic;
+        }
+    }
+
+.textOnly{
+    table{
+        text-align: left;
+        }
+    th{
+        border-bottom: .125rem solid white;
+        font-weight: 700;
+        }
+    tr{border-bottom: 0.03125rem solid white;}
+    td{
+        padding-top: .5rem;
+        padding-bottom: .5rem;}
+    th + th, td + td{
+        padding-left: 1rem;
+        }
+    }

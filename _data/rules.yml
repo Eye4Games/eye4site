@@ -1,0 +1,27 @@
+- name: Pizza City
+  link: pizza
+  players: 4
+  time: 30 min
+  mechanics: Tile Placement, Racing
+  summary: Become the pizza (delivery) champion in an ever-changing city.
+
+- name: Bluff the Bullet
+  link: bluff
+  players: 2–5
+  time: 30 min
+  mechanics: Bluffing, Hand Manipulation, Hidden Information
+  summary: Cheat and bluff your way to victory in Bluff the Bullet.
+
+- name: Defense Force ULTRA
+  link: ultra
+  players: 3–5
+  time: 60 min
+  mechanics: Cooperative Drafting, Simultaneous Play, Auto Villain
+  summary: Protect the town of Phoenix Bluff, and all of Earth, with extreme punching!
+
+- name: Aloft
+  link: aloft
+  players: 3–5
+  time: 60 min
+  mechanics: Tile Placement, 4X
+  summary: You were born, grew up, and live in the sky. If you're, you’ll become a legend in it, too.

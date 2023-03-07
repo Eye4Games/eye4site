@@ -1,0 +1,71 @@
+.rules{
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    a{ @extend %link}
+    }
+.rulesListing{
+    padding: 0 0 3rem;
+    &:last-child{
+        padding-bottom: 0;
+        }
+    .meta{
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+        list-style-type: disc;
+        }
+    }
+.rulesTextWrap{
+    grid-template-columns: 7fr 1fr 4fr;
+    grid-template-areas: 'main . aside';
+    }
+.rulesText{
+    background-color: lighten($lightBlack,20%);
+    color: $darkerBlack;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    main{grid-area: main;}
+    h1{
+        border-top-color: $mainBlack;
+        font-size: 3rem;
+        }
+    h2{ font-size: 2rem;}
+    h3{ font-size: 1.75rem;}
+    h4{
+        font: 700 1.5rem 'IBM Plex Sans';
+        text-transform: none;
+        }
+    h5{
+        font-size: 1.25rem;
+        font-weight: 700;
+        }
+    blockquote{
+        padding: 1rem 0;
+        }
+    ul, ol{
+        padding-inline-start: 1rem;
+        }
+    ul{
+        list-style-type: disc;
+        }
+    ol{
+        font-size: 1.8em;
+        line-height: 1.7em;
+        list-style-type: decimal;
+        }
+    th, tr{border-bottom-color: $mainBlack;}
+    table, p, ol, ul{
+        & + h2{margin-top: 2rem;}
+        }
+    table, p, ol, ul{
+        & + h3, & + h4, & + h5{margin-top: 1rem;}
+        }
+    }
+.rulesText .toc{
+    border-top: 1px solid $mainBlack;
+    grid-area: aside;
+    height: fit-content;
+    padding-top: .5rem;
+    position: sticky;
+    top: -1px;
+    ul li{font-size: 1rem;}
+    }

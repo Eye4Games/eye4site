@@ -1,0 +1,26 @@
+- name: Rise of the Robotariat
+  players: "3–5"
+  time: 45 Min
+  mechanics: Co-op Move & Act
+  box: rise-box.webp
+  buy: https://gumroad.com/l/robotariat-order
+  more: /games/robotariat/
+  color: riseGame
+
+- name: Clairoyance
+  players: "2–5"
+  time: 15 Min per Player
+  mechanics: Player Elimination
+  box: clair-box.webp
+  buy: https://gumroad.com/l/clairvoyance-order
+  more: /games/clairvoyance/
+  color: clairGame
+
+- name: AlakaSLAM
+  players: "2–4"
+  time: 30–45 Min
+  mechanics: Hand Management
+  box: alaka-box.webp
+  buy: https://gumroad.com/l/alakaslam-order
+  more: /games/alakaslam/
+  color: alakaGame

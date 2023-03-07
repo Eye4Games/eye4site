@@ -1,0 +1,167 @@
+- name: "Eye4Games Plays: Rise of the Robotariat"
+  thumb: eye4play-rise-thumb.webp
+  date: Jun 5, 2021
+  link: https://youtu.be/AF5raq6LQTw
+  related-game: Rise of the Robotariat
+  related-game-link: ../games/robotariat
+
+- name: "Eye4Games Plays: AlakaSLAM"
+  thumb: eye4play-alaka-thumb.webp
+  date: Apr 26, 2021
+  link: https://youtu.be/l5N1ngVUF44
+  related-game: AlakaSLAM
+  related-game-link: ../games/alakaslam
+
+- name: "Eye4Games Plays: Concrete Jungle"
+  thumb: concrete-2-thumb.webp
+  date: May 12, 2020
+  link: https://youtu.be/J2L555ZSZEo
+  related-game: Concrete Jungle
+  related-game-link: https://eye4games.itch.io/concrete-jungle
+
+- name: "Eye4Labs Presents: Concrete Jungle"
+  thumb: concrete-1-thumb.webp
+  date: May 12, 2020
+  link: https://youtu.be/qfWI8z5D8Go
+  related-game: Concrete Jungle
+  related-game-link: https://eye4games.itch.io/concrete-jungle
+
+- name: "Muses Overview"
+  thumb: muses-thumb.webp
+  date: Apr 10, 2020
+  link: https://youtu.be/vcNlHyoYoQw
+  related-game: Muses
+  related-game-link: https://eye4games.itch.io/muses
+
+- name: "The Once and Future Cuisine Overview"
+  thumb: oafc-2-thumb.webp
+  date: Mar 31, 2020
+  link: https://youtu.be/dWFieWZsD-A
+  related-game: The Once and Future Cuisine
+  related-game-link: https://eye4games.itch.io/the-once-and-future-cuisine
+
+- name: "Eye4Labs Presents: The Once and Future Cuisine"
+  thumb: oafc-thumb.webp
+  date: Dec 8, 2019
+  link: https://youtu.be/cjR6mfwGGTI
+  related-game: The Once and Future Cuisine
+  related-game-link: https://eye4games.itch.io/the-once-and-future-cuisine
+
+- name: "Bluff the Bullet Overview"
+  thumb: btb-thumb.webp
+  date: Apr 14, 2019
+  link: https://youtu.be/QMoM5sZDjOU
+  related-game: Bluff the Bullet
+  related-game-link: https://eye4games.itch.io/bluff-the-bullet
+
+- name: "ULTRA Overview"
+  thumb: ultra-thumb.webp
+  date: Apr 14, 2019
+  link: https://youtu.be/8VjJS54POoo
+  related-game: Defense Force Ultra
+  related-game-link: https://eye4games.com
+
+- name: "Eye4Labs Holiday Release Video"
+  thumb: wiba-thumb.webp
+  date: Dec 24, 2018
+  link: https://youtu.be/d9mi9M6_3xk
+  related-game: What If, But Also
+  related-game-link: https://eye4games.itch.io/what-if-but-also
+
+- name: "Aloft Overview"
+  thumb: aloft-thumb.webp
+  date: Apr 19, 2018
+  link: https://youtu.be/sOlsvkqTWkg
+  related-game: Aloft
+  related-game-link: https://eye4games.com
+
+- name: "What If, But Also Overview"
+  thumb: wiba-1-thumb.webp
+  date: Apr 19, 2018
+  link: https://youtu.be/PGRN6y8eor4
+  related-game: What If, But Also
+  related-game-link: https://eye4games.itch.io/what-if-but-also
+
+- name: "Rise of the Robotariat Demo Video"
+  thumb: rise-2-thumb.webp
+  date: Jun 25, 2016
+  link: https://youtu.be/cVyVXLxKCPo
+  related-game: Rise of the Robotariat
+  related-game-link: ../games/robotariat
+
+- name: "Rise of the Robotariat Kickstarter Pitch"
+  thumb: rise-1-thumb.webp
+  date: Jun 21, 2016
+  link: http://kck.st/28KC5xx
+  related-game: Rise of the Robotariat
+  related-game-link: ../games/robotariat
+
+- name: "Sebastian’s Supernatural Soiree: Julius Caesar"
+  thumb: sebastian-caesar-thumb.webp
+  date: Apr 5, 2015
+  link: https://youtu.be/D2uIzuRGfno
+  related-game: Clairvoyance
+  related-game-link: ../games/clairvoyance
+
+- name: "Sebastian’s Supernatural Soiree: Evita Perón"
+  thumb: sebastian-evita-thumb.webp
+  date: Apr 5, 2015
+  link: https://youtu.be/kMIYECJendc
+  related-game: Clairvoyance
+  related-game-link: ../games/clairvoyance
+
+- name: "Sebastian’s Supernatural Soiree: Johnny Appleseed"
+  thumb: sebastian-johnny-thumb.webp
+  date: Apr 5, 2015
+  link: https://youtu.be/XhOUP5My9SI
+  related-game: Clairvoyance
+  related-game-link: ../games/clairvoyance
+
+- name: "Sebastian’s Supernatural Soiree: Sacagawea"
+  thumb: sebastian-sacagawea-thumb.webp
+  date: Apr 5, 2015
+  link: https://youtu.be/yl9XOuBI4T0
+  related-game: Clairvoyance
+  related-game-link: ../games/clairvoyance
+
+- name: "Sebastian’s Supernatural Soiree: Tutankhamun"
+  thumb: sebastian-tut-thumb.webp
+  date: Apr 5, 2015
+  link: https://youtu.be/lACsQGoyYEQ
+  related-game: Clairvoyance
+  related-game-link: ../games/clairvoyance
+
+- name: "Sebastian’s Supernatural Soiree: Zheng Shi"
+  thumb: sebastian-zheng-thumb.webp
+  date: Apr 5, 2015
+  link: https://youtu.be/yvXOD3yp3xs
+  related-game: Clairvoyance
+  related-game-link: ../games/clairvoyance
+
+- name: "Clairvoyance Gameplay Video"
+  thumb: clair-1-thumb.webp
+  date: Apr 5, 2015
+  link: https://youtu.be/J3LOu0T0PgU
+  related-game: Clairvoyance
+  related-game-link: ../games/clairvoyance
+
+- name: "Clairvoyance Kickstarter Pitch"
+  thumb: clair-2-thumb.webp
+  date: Apr 5, 2015
+  link: https://youtu.be/7yHG5dE7VQk
+  related-game: Clairvoyance
+  related-game-link: ../games/clairvoyance
+
+- name: "Buy RX-97 Today!"
+  thumb: clair-3-thumb.webp
+  date: Mar 10, 2015
+  link: https://youtu.be/5SN8MvQ098o
+  related-game: Clairvoyance
+  related-game-link: ../games/clairvoyance
+
+- name: "AlakaSLAM Kickstarter Pitch"
+  thumb: alaka-thumb.webp
+  date: May 16, 2014
+  link: http://kck.st/1lwrIfp
+  related-game: AlakaSLAM
+  related-game-link: ../games/alakaslam
