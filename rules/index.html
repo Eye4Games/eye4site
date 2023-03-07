@@ -19,14 +19,14 @@ layout: default
         {% assign sorted_rules = site.data.rules | sort:'name' %}
         {% for rules in sorted_rules %}
         <div class="rulesListing">
-            <h2><a href="{{rules.link}}">{{rules.name}}</a></h2>
+            <h2><a href="rules/{{rules.link}}">{{rules.name}}</a></h2>
             <ul class="meta">
                 <li>{{rules.players}}</li>
                 <li>{{rules.time}}</li>
                 <li>{{rules.mechanics}}</li>
             </ul>
             <p><em>{{rules.summary}}</em></p>
-            <p><a href="{{rules.link}}">Read Rules »</a></p>
+            <p><a href="rules/{{rules.link}}">Read Rules »</a></p>
         </div>
         {% endfor %}
     </div>
