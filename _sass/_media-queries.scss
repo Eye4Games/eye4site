@@ -82,6 +82,10 @@
             padding-left: .25rem;
             }
         }
+    .megasale{
+        background:linear-gradient(45deg, rgba($midBlack,.75),rgba($mainBlue,.9)), url("../images/eye4_megasale-site.webp") center/cover;
+        .bottomline{color: white;}
+        }
     .untilSmall{display: none;}
 
     }
@@ -102,6 +106,17 @@
         grid-template-areas: 'image' 'text' 'cta' 'cost';
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
+        }
+    .banner{
+        grid-auto-flow: row;
+        row-gap: 2rem;
+        }
+    .megasale{
+        .text,.offer{text-align: center;}
+        .midline{font-size: 4rem;}
+        .bottomline{font-size: 1.5rem;}
+        background:linear-gradient(to bottom, rgba($midBlack,.75),rgba($mainBlue,.9)), url("../images/eye4_megasale-site.webp") center/cover;
+        grid-auto-columns: 100%;
         }
     }
 

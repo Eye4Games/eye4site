@@ -59,6 +59,62 @@ div.newsletterWrap{
 .announcementBody{
     grid-area: 'body';
     }
+//
+//*************************************************BANNER
+.bannerArea{
+    padding-top: 2rem;
+    }
+.banner{
+    background-color: $mainBlue;
+    border-radius: .25rem;
+    color: white;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    padding: $columnGap;
+    min-height: 8rem;
+    text-decoration: none;
+    &:hover{
+        box-shadow: .25em .5em .5em rgba(black,.15),  1em 1em 1.5em rgba(black,.1);
+        }
+    }
+.megasale{
+    background: url("../images/eye4_megasale-site.webp") center/cover;
+    .text, .offer{
+        font-size: 1rem;
+        display: grid;
+        row-gap: .25rem;
+        }
+    .text{text-align: left;}
+    .offer{text-align: right;}
+    .topline{
+        font-style: italic;
+        font-weight: 600;
+        }
+    .midline{
+        font-family: "Oswald";
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        }
+    .bottomline{
+        color: $darkerBlack;
+        font-weight: 600;
+        }
+    .coupon{
+        align-self: center;
+        background-color: white;
+        border-radius: .25em;
+        color: $mainBlue;
+        font-size: 1.25rem;
+        font-weight: 600;
+        padding: .5rem 1rem;
+        text-align: center;
+        }
+    &:hover .coupon{
+        background-color: $darkerBlack;
+        }
+    }
+
 @import 'box';
 @import 'labs';
 @import 'team';
