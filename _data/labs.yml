@@ -1,12 +1,22 @@
-- name: Scrapyard Speedway
+- name: XXV
   date: N/A
-  image: dev-tile-scrap.webp
+  image: dev-tile-xxv.webp
   release: N/A
-  description: A racing game where the car you start in won't be the one you finish with.
+  description: Take tricks, and take territory.
   pitch:
-  status: Almost Done
+  status: Just Started
+  progress: minProgress
+  link: https://eye4games.itch.io/pizza-city
+
+- name: Scrapyard Speedway
+  date: Winter 2023
+  image: dev-tile-scrap.webp
+  release: dev-tile-scrap-release.webp
+  description: A racing game where the car you start in won't be the one you finish with.
+  pitch: Micro-sized racing game with part swapping along the way.
+  status: Released
   progress: muchProgress
-  link: https://eye4games.com
+  link: https://eye4games.itch.io/scrapyard-speedway
 
 - name: Pizza City
   date: Summer 2023
