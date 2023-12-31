@@ -15,7 +15,7 @@
   description: A racing game where the car you start in won't be the one you finish with.
   pitch: Micro-sized racing game with part swapping along the way.
   status: Released
-  progress: muchProgress
+  progress: maxProgress
   link: https://eye4games.itch.io/scrapyard-speedway
 
 - name: Pizza City
